@@ -3,127 +3,152 @@
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 </script>
-
 <header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div>
+<a href="#" class="logo">logo</a>
+<input type="checkbox" id="menu-bar">
+<label for="menu-bar">Menu</label>
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
-
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div>
-</header>
-
+<nav class="navbar">
+    <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">levels +</a>
+    		<ul>
+ 				<li><a href="#">north america</a></li>
+		        <li><a href="#">south america</a></li>
+                <li class="europe"><a href="#">europe +</a>
+                        <ul>
+                            <li><a href="#">test</a></li>
+                            <li><a href="#">test</a></li>
+                            <li><a href="#">test</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">review</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">feedback</a></li>
+            </ul>
+        </nav>
+	</header>
 <style>
-	header {
-		display: flex;
-		justify-content: space-between;
-	}
+header {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    background: #ffffff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    padding: 0px 8%;
+}
 
-	.corner {
-		width: 3em;
-		height: 3em;
-	}
+header .logo{
+    font-weight: bolder;
+    font-size: 250%;
+    color: #333;
+}
 
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-	}
+header .navbar ul{
+    list-style: none;
+}
 
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
-	}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
 
-	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
-	}
+header .navbar ul li a{
+    font-size: 150%;
+    padding: 20px;
+    color: #333;
+    display: block;
+}
 
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
+header .navbar ul li a:hover{
+    background-color: #333;
+    color: #fff;
+}
 
-	path {
-		fill: var(--background);
-	}
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
 
-	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
 
-	li {
-		position: relative;
-		height: 100%;
-	}
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
 
-	li[aria-current='page']::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
-	}
+header .navbar ul li:hover > ul{
+    display: initial;
+}
 
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 0.5rem;
-		color: var(--color-text);
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
-	}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
 
-	a:hover {
-		color: var(--color-theme-1);
-	}
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 150%;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:991px){
+
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,.1);
+        display: none;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+}
 </style>

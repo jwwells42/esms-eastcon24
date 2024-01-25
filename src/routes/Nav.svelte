@@ -1,1 +1,0 @@
-<!--Draven's navbar lives here & we add that component to each +page.svelte-->

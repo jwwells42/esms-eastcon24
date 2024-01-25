@@ -36,6 +36,7 @@
 </body>
 <style>
   body {
+    min-width: 100vw;
     background-color: rgb(88, 101, 54);
     overflow: hidden;
   }

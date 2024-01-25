@@ -50,14 +50,7 @@
 </div>
 </body>
 <style>
-    body { 
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
 
-    #container {
-        height: 100%;
-        width: 100%;
-    }
     #instruction-container {
         position: absolute;
         color: white;

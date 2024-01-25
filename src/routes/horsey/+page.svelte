@@ -6,4 +6,4 @@
     <title>horsey</title>
 </svelte:head>
 
-<Horsey></Horsey> 
+<Horsey />

@@ -6,5 +6,6 @@
     <title>globular geo mappy seventh continent burg</title>
 </svelte:head>
 
+<Globe />
 
-<Globe></Globe> //refactor to allow passing of props into Globe for different campaigns
+<!--refactor to allow passing of props into Globe for different campaigns-->
