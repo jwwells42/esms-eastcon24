@@ -29,5 +29,21 @@ export const learnPiecesData = [
         label: "BAD TEST",
         position: "8/8/8/8/4N3/8/8/8 w - - 0 1",
         instruction: "WE HAVE ILLEGAL FENS AND THE HORSEY GOES GOOD",
+    },{
+        label: "Checkmate",
+        position: "2k5/8/2K5/8/8/8/8/7R w - - 0 1",
+            instruction: "When the king is threatened, and nothing can block it, or nothing can take the threating piece, and can't move it is checkmate.",
+    },{
+        label: "Promotion",
+        position: "8/3P4/8/8/8/8/8/8 w HAha - 0 1",
+        instruction: "When a pawn makes it to the other side of the board it can choose to promote to a Queen, Knight, Bishop, or a rook.",
+    },{
+        label: "Castling",
+        position: "8/8/8/8/P1B5/1P3N2/1B3PPP/R3K2R w KQha - 0 1",
+        instruction: "You are able to castle when neither the rook or the king has moved, you can move the king to spaces towards the rook and flip the rook over the king infront of him, but you can't castle through check, or into check.",
+    },{
+        label: "Check",
+        position: "4rb2/1b5p/6p1/B2k4/6PN/pP1P3P/P3K3/1R6 w - - 0 1",
+        instruction: ".",
     }
 ]
