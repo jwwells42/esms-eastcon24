@@ -1,0 +1,78 @@
+diff --git a/node_modules/svelte-chess/dist/Chess.svelte b/node_modules/svelte-chess/dist/Chess.svelte
+index 4b6be76..9bb9b99 100644
+--- a/node_modules/svelte-chess/dist/Chess.svelte
++++ b/node_modules/svelte-chess/dist/Chess.svelte
+@@ -18,11 +18,17 @@ export let engine = void 0;
+ let className = void 0;
+ export { className as class };
+ let api = void 0;
+-export function load(newFen) {
++export function load(newFen, { skipValidation = true, preserveHeaders = false }) {
+   if (!api)
+     throw new Error("component not mounted yet");
+-  api.load(newFen);
++  api.load(newFen, { skipValidation, preserveHeaders });
+ }
++export function swapTurn() {
++  let tokens = api.fen().split(" ");
++    tokens[1] = api.turn() === "b" ? "w" : "b";
++    tokens[3] = "-";
++    api.load(tokens.join(" "), { skipValidation: true, preserveHeaders: false });
++  }
+ export function move(moveSan) {
+   if (!api)
+     throw new Error("component not mounted yet");
+diff --git a/node_modules/svelte-chess/dist/Chess.svelte.d.ts b/node_modules/svelte-chess/dist/Chess.svelte.d.ts
+index f8f9167..1517946 100644
+--- a/node_modules/svelte-chess/dist/Chess.svelte.d.ts
++++ b/node_modules/svelte-chess/dist/Chess.svelte.d.ts
+@@ -17,7 +17,7 @@ declare const __propDef: {
+         orientation?: Color | undefined;
+         engine?: Engine | undefined;
+         class?: string | undefined;
+-        load?: ((newFen: string) => void) | undefined;
++        load?: ((newFen: string, { skipValidation = false, preserveHeaders = false }) => void) | undefined;
+         move?: ((moveSan: string) => void) | undefined;
+         getHistory?: {
+             (): string[];
+@@ -55,7 +55,7 @@ export type ChessProps = typeof __propDef.props;
+ export type ChessEvents = typeof __propDef.events;
+ export type ChessSlots = typeof __propDef.slots;
+ export default class Chess extends SvelteComponentTyped<ChessProps, ChessEvents, ChessSlots> {
+-    get load(): (newFen: string) => void;
++    get load(): (newFen: string, { skipValidation = boolean, preserveHeaders = boolean }) => void;
+     get move(): (moveSan: string) => void;
+     get getHistory(): {
+         (): string[];
+diff --git a/node_modules/svelte-chess/dist/api.d.ts b/node_modules/svelte-chess/dist/api.d.ts
+index ab79436..272bf5d 100644
+--- a/node_modules/svelte-chess/dist/api.d.ts
++++ b/node_modules/svelte-chess/dist/api.d.ts
+@@ -27,7 +27,7 @@ export declare class Api {
+     gameOverCallback?: (gameOver: GameOver) => void, // called after game-ending move
+     _orientation?: Color, engine?: Engine | undefined);
+     init(): Promise<void>;
+-    load(fen: string): void;
++    load(fen: string, { skipValidation = boolean, preserveHeaders = boolean }): void;
+     _chessgroundMoveCallback(orig: Square | 'a0', dest: Square | 'a0'): Promise<void>;
+     private _moveIsPromotion;
+     move(moveSanOrObj: string | {
+diff --git a/node_modules/svelte-chess/dist/api.js b/node_modules/svelte-chess/dist/api.js
+index 0c1ce05..e980ba0 100644
+--- a/node_modules/svelte-chess/dist/api.js
++++ b/node_modules/svelte-chess/dist/api.js
+@@ -43,12 +43,12 @@ export class Api {
+         }
+         this.initialised = true;
+     }
+-    // Load FEN. Throws exception on invalid FEN.
++    // Load FEN. Throws exception on invalid FEN, unless skipValidation is true.
+     load(fen) {
+         let engineStopSearchPromise;
+         if (this.initialised && this.engine?.isSearching())
+             engineStopSearchPromise = this.engine.stopSearch();
+-        this.chessJS.load(fen);
++        this.chessJS.load(fen, { skipValidation: true, preserveHeaders: false });
+         this._checkForGameOver();
+         this.cg.set({ animation: { enabled: false } });
+         const cgColor = Api._colorToCgColor(this.chessJS.turn());
