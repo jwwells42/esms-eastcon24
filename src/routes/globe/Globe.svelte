@@ -1,14 +1,15 @@
 <script>
-    // Instruction should maybe be its own component
+    
     import Globe from 'globe.gl';
     import {onMount} from "svelte";
     let countries;
+    let stateArray;
+    let target;
 
     onMount(async () => {
-        // target should be set by Math.random() instead of manually--test case below
-        let target = "Wyoming";
-        document.getElementById("instruction").innerHTML = "Find " + target + "!";
         countries = await getData();
+        stateArray = extractStateNames(countries);
+        target = stateArray[stateArray.length * Math.random() | 0];        
         const world = Globe()
             .pointOfView({lat: 36, lng: -101, altitude: 1.4}, 4000)  
             .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
@@ -28,8 +29,9 @@
             )
             .polygonsTransitionDuration(300)
             .onPolygonClick(polygon => {
-                if (polygon.properties.NAME === "Wyoming") {
-                    alert("Good job! " + polygon.properties.NAME + " has been clicked.") 
+                if (polygon.properties.NAME === target) {
+                    alert("Good job! " + polygon.properties.NAME + " has been clicked.");
+                    target = stateArray[stateArray.length * Math.random() | 0];
                 } else {
                     alert("Keep trying! " + polygon.properties.NAME + " has been clicked.")
                 }})
@@ -40,11 +42,21 @@
         const response = await fetch('gz_2010_us_040_00_20m.json');
         return await response.json();
     }
+
+    function extractStateNames(countries) {
+        const states = [];
+        countries.features.forEach(feature => {
+            const stateName = feature.properties.NAME;
+            states.push(stateName);
+        });
+        return states;
+    }
+
 </script>
 <body>
 <div id="container">
     <div id="instruction-container">
-        <h1 id="instruction">instruction blank</h1>
+        <h1 id="instruction">Find {target}!</h1>
     </div>
     <div id="globeViz"></div>
 </div>
