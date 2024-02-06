@@ -1,8 +1,3 @@
-<script>
-	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
-</script>
 <header>
 <a href="#" class="logo">logo</a>
 <input type="checkbox" id="menu-bar">
