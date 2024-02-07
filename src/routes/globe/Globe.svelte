@@ -29,7 +29,6 @@
                     return ''
                 } })
             .onPolygonHover(hoverD => world
-            .polygonAltitude(d => d === hoverD ? 0.12 : 0.06)
             .polygonCapColor(d => d === hoverD ? 'darkred' : 'steelblue')
             )
             .polygonsTransitionDuration(300)
