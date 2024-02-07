@@ -2,6 +2,8 @@
     
     import Globe from 'globe.gl';
     import {onMount} from "svelte";
+    import globeSkin from '$lib/images/earth-night.jpg'
+    import globeBackground from '$lib/images/night-sky.png'
     let countries;
     let stateData;
     let stateNames;
@@ -14,8 +16,8 @@
         target = stateNames[Math.floor(Math.random() * stateNames.length)];
         const world = Globe()
             .pointOfView({lat: 36, lng: -101, altitude: 1.4}, 4000)  
-            .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-            .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+            .globeImageUrl(globeSkin)
+            .backgroundImageUrl(globeBackground)
             .lineHoverPrecision(0)
             .polygonsData(countries.features)
             .polygonAltitude(0.06)
