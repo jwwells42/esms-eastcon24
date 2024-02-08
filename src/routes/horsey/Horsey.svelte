@@ -2,13 +2,15 @@
   import { Chess } from 'svelte-chess';
   import Sidebar from './Sidebar.svelte';
   import Instruction from './Instruction.svelte';
+  import { flip } from '$lib/store.js';
 
   let chess, fen;
   let position = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 
-  function moveFlipper(event) {
-    chess.swapTurn()
-	}
+  function moveFlipper() {
+    if ($flip) {
+      chess.swapTurn()
+	  }}
 
   $: if (chess) {
     chess.load(position, { skipValidation: true, preserveHeaders: false });

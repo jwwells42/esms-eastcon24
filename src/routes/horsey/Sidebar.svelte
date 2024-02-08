@@ -1,6 +1,6 @@
 <script>
     import { createEventDispatcher } from 'svelte';
-    import { instruction, learnPiecesData } from '$lib/store.js'
+    import { instruction, flip, learnPiecesData } from '$lib/store.js'
     export let position;
     const dispatch = createEventDispatcher();
 
@@ -9,14 +9,16 @@
         dispatch('positionUpdated', { position: newFEN });
     }
 
-    function clickHandler(newFEN, newWords) {
+    function clickHandler(newFEN, newWords, newFlip) {
         updatePosition(newFEN);
         $instruction = newWords;
+        $flip = newFlip;
+
     }
 </script>
 <ul>
-    {#each learnPiecesData as { label, position, instruction }}
-      <li on:click={() => clickHandler(position, instruction)}>{label}</li>
+    {#each learnPiecesData as { label, position, instruction, flip }}
+      <li on:click={() => clickHandler(position, instruction, flip)}>{label}</li>
     {/each}
 </ul>
 <hr>
