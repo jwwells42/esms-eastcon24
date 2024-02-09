@@ -8,6 +8,7 @@
     let stateData;
     let stateNames;
     let target;
+    let bigScore= 0;
     let instruction = "Click to win!";
 
     onMount(async () => {
@@ -27,7 +28,7 @@
             .polygonSideColor(() => 'rgba(0, 100, 0, 0.15)')
             .polygonStrokeColor(() => '#111')
             .polygonLabel(({ properties: d }) => {
-                if (stateData[d.NAME].score < 1) {
+                if (stateData[d.NAME].score < 2) {
                     return `<strong>${d.NAME}</strong>`
                 } else {
                     return ''
@@ -39,11 +40,17 @@
             .onPolygonClick(polygon => {
                 if (polygon.properties.NAME === target) {
                     stateData[target].score++;
+                    bigScore++;
                     target = stateNames[Math.floor(Math.random() * stateNames.length)];
+                    if (bigScore >= 100) {
+                        instruction = "WINNER!"
+                    } else {
                     instruction = "Good job! You clicked " + polygon.properties.NAME + "! Now find " + target + ".";
+                    }
                 } else {
-                    instruction = "Keep trying! That was " + polygon.properties.NAME + ". Find " + target + ".";
                     stateData[target].score--;
+                    bigScore--;
+                    instruction = "Keep trying! That was " + polygon.properties.NAME + ". Find " + target + ".";
                 }})
     (document.getElementById('globeViz'))
     });
@@ -68,7 +75,7 @@
 <body>
 <div id="container">
     <div id="instruction-container">
-        <h1 id="instruction">{instruction}</h1>
+        <h1 id="instruction">{instruction} {bigScore}/100</h1>
     </div>
     <div id="globeViz"></div>
 </div>
