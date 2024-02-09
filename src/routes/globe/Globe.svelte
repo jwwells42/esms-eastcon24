@@ -8,12 +8,14 @@
     let stateData;
     let stateNames;
     let target;
+    let instruction = "Click to win!";
 
     onMount(async () => {
         countries = await getData();
         stateData = extractStateData(countries);
         stateNames = Object.keys(stateData);
         target = stateNames[Math.floor(Math.random() * stateNames.length)];
+        instruction = "Find " + target + "!";
         const world = Globe()
             .pointOfView({lat: 36, lng: -101, altitude: 1.4}, 4000)  
             .globeImageUrl(globeSkin)
@@ -36,11 +38,11 @@
             .polygonsTransitionDuration(300)
             .onPolygonClick(polygon => {
                 if (polygon.properties.NAME === target) {
-                    alert("Good job! " + polygon.properties.NAME + " has been clicked.");
                     stateData[target].score++;
                     target = stateNames[Math.floor(Math.random() * stateNames.length)];
+                    instruction = "Good job! You clicked " + polygon.properties.NAME + "! Now find " + target + ".";
                 } else {
-                    alert("Keep trying! " + polygon.properties.NAME + " has been clicked.")
+                    instruction = "Keep trying! That was " + polygon.properties.NAME + ". Find " + target + ".";
                     stateData[target].score--;
                 }})
     (document.getElementById('globeViz'))
@@ -56,12 +58,8 @@
 
     countries.features.forEach(feature => {
         const stateName = feature.properties.NAME;
-        
-        // Assign a default score for each state, you can modify this as needed
         const score = 0;
-
-        // Create an object with the state name and associated score
-        stateData[stateName] = { score };
+        stateData[stateName] = {score};
     });
 
     return stateData;
@@ -70,7 +68,7 @@
 <body>
 <div id="container">
     <div id="instruction-container">
-        <h1 id="instruction">Find {target}!</h1>
+        <h1 id="instruction">{instruction}</h1>
     </div>
     <div id="globeViz"></div>
 </div>
