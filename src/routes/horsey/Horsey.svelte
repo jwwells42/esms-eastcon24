@@ -2,15 +2,16 @@
   import { Chess } from 'svelte-chess';
   import Sidebar from './Sidebar.svelte';
   import Instruction from './Instruction.svelte';
-  import { flip } from '$lib/store.js';
+  import { flip, captureEqualsWin } from '$lib/store.js';
 
   let chess, fen;
   let position = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 
-  function moveFlipper() {
+  function handleMove() {
     if ($flip) {
-      chess.swapTurn()
-	  }}
+      chess.swapTurn();
+	  }
+  }
 
   $: if (chess) {
     chess.load(position, { skipValidation: true, preserveHeaders: false });
@@ -27,7 +28,7 @@
         bind:this={chess}
         bind:fen
         on:positionUpdated={() => chess.load(position, { skipValidation: true, preserveHeaders:false })}
-        on:move={moveFlipper}
+        on:move={handleMove}
         />
 
     </div>
