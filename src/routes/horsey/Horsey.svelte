@@ -7,10 +7,14 @@
   let chess, fen;
   let position = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 
-  function handleMove() {
-    if ($flip) {
-      chess.swapTurn();
-	  }
+  function handleMove(event) {
+    if ($captureEqualsWin && event.detail.captured) {
+      alert('Good job! Go to the next menu item.');
+    } else if ($flip) {
+        chess.swapTurn();
+	  } else {
+      alert('We might have broken something.')
+    }
   }
 
   $: if (chess) {

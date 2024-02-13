@@ -27,6 +27,12 @@
             .polygonCapColor(feat => 'steelblue')
             .polygonSideColor(() => 'rgba(0, 100, 0, 0.15)')
             .polygonStrokeColor(() => '#111')
+            .polygonLabel(({ properties: d }) => {
+                if (stateData[d.NAME].score < 1) {
+                    return `<strong>${d.NAME}</strong>`
+                } else {
+                    return ''
+                } })
             .onPolygonHover(hoverD => world
             .polygonCapColor(d => d === hoverD ? 'darkred' : 'steelblue')
             )

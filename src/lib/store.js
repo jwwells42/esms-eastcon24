@@ -1,11 +1,11 @@
 import { writable } from 'svelte/store';
 export let instruction = writable("Welcome to How the Horsey Moves. Let's learn how to play chess! Click KING to get started."); 
 export let flip = writable(true); 
-export let captureEqualsWin = writable(true); 
+export let captureEqualsWin = writable(true);
 export const learnPiecesData = [
     {
         label: "♘ KNIGHT",
-        position: "8/8/6p1/8/8/3N4/8/8 w - - 0 1",
+        position: "2k5/6p1/8/8/3N4/8/8/2K5 w - - 0 1",
         instruction: "The knight moves in an L shape. Sometimes we call it a horsey. Capture the pawn to win!",
         flip: true,
         captureEqualsWin: true
@@ -17,7 +17,7 @@ export const learnPiecesData = [
         captureEqualsWin: true
     },{
         label: "♗ BISHOP",
-        position: "8/8/6p1/8/8/3B4/8/8 w - - 0 1",
+        position: "8/8/6p1/8/8/4B3/8/8 w - - 0 1",
         instruction: "The bishop moves in diagonal lines. Capture the pawn to win!",
         flip: true,
         captureEqualsWin: true
