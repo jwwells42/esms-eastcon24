@@ -11,13 +11,13 @@ export const learnPiecesData = [
         captureEqualsWin: true
     },{
         label: "♖ ROOK",
-        position: "8/8/6p1/8/8/3R4/8/8 w - - 0 1",
+        position: "8/8/6R1/8/8/8/8/8 w - - 0 1",
         instruction: "The rook moves in straight lines. Capture the pawn to win!",
         flip: true,
-        captureEqualsWin: true
+        captureEqualsWin: false
     },{
         label: "♗ BISHOP",
-        position: "8/8/6p1/8/8/4B3/8/8 w - - 0 1",
+        position: "8/6p1/8/8/8/4B3/8/8 w - - 0 1",
         instruction: "The bishop moves in diagonal lines. Capture the pawn to win!",
         flip: true,
         captureEqualsWin: true

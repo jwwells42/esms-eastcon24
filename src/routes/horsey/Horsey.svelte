@@ -13,7 +13,7 @@
     } else if ($flip) {
         chess.swapTurn();
 	  } else {
-      alert('We might have broken something.')
+      alert('We might have broken something.');
     }
   }
 
