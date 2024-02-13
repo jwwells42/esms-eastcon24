@@ -4,7 +4,7 @@
   import Instruction from './Instruction.svelte';
   import { flip, captureEqualsWin } from '$lib/store.js';
 
-  let chess, fen;
+  let chess;
   let position = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 
   function handleMove(event) {
@@ -25,12 +25,11 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <Sidebar bind:position on:positionUpdated={e => position = e.detail.position} />
+      <Sidebar bind:position on:positionUpdated={event => position = event.detail.position} />
     </div>
     <div class="chessboard">
       <Chess 
         bind:this={chess}
-        bind:fen
         on:positionUpdated={() => chess.load(position, { skipValidation: true, preserveHeaders:false })}
         on:move={handleMove}
         />
