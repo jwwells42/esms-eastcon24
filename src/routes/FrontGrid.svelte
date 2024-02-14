@@ -2,7 +2,7 @@
     <div class="container">
         <div class="item item-1">Geography Game
             <img src="globe.png">
-            <h1 href="#" class="btn">Try It!</h1>
+            <h1 href="/globe" class="btn">Try It!</h1>
         </div>
         <div class="item item-2">2</div>
         <div class="item item-3">3</div>
@@ -48,6 +48,7 @@ body {
     font-size: 30px;
     text-align: center;
 }
+
 
 .container {
     display: grid;

@@ -4,6 +4,12 @@ export let flip = writable(true);
 export let captureEqualsWin = writable(true);
 export const learnPiecesData = [
     {
+        label: "♔ KING",
+        position: "1k6/8/5p2/8/8/8/4K3/8 w - - 0 1",
+        instruction: "The most important piece in the game. The King can move one square at a time, and should be protected!",
+        flip: true,
+        captureEqualsWin: true
+    },{
         label: "♘ KNIGHT",
         position: "2k5/6p1/8/8/3N4/8/8/2K5 w - - 0 1",
         instruction: "The knight moves in an L shape. Sometimes we call it a horsey. Capture the pawn to win!",
@@ -11,19 +17,19 @@ export const learnPiecesData = [
         captureEqualsWin: true
     },{
         label: "♖ ROOK",
-        position: "8/8/6R1/8/8/8/8/8 w - - 0 1",
+        position: "3k4/8/8/2p5/2R5/8/8/4K3 w - - 0 1",
         instruction: "The rook moves in straight lines. Capture the pawn to win!",
         flip: true,
-        captureEqualsWin: false
+        captureEqualsWin: true
     },{
         label: "♗ BISHOP",
-        position: "8/6p1/8/8/8/4B3/8/8 w - - 0 1",
+        position: "1k6/7p/8/8/8/3B4/8/4K3 w HAha - 0 1",
         instruction: "The bishop moves in diagonal lines. Capture the pawn to win!",
         flip: true,
         captureEqualsWin: true
     },{
         label: "♕ QUEEN",
-        position: "8/8/6p1/8/8/4Q3/8/8 w - - 0 1",
+        position: "1k6/4Q2p/8/8/8/8/8/4K3 w HAha - 0 1",
         instruction: "The queen moves like the rook and the bishop combined. Capture the pawn to win!",
         flip: true,
         captureEqualsWin: true
@@ -34,14 +40,8 @@ export const learnPiecesData = [
         flip: true,
         captureEqualsWin: true
     },{
-        label: "♔ KING",
-        position: "8/8/5p2/8/8/8/4K3/8 w - - 0 1",
-        instruction: "The most important piece in the game. The King can move one square at a time, and should be protected!",
-        flip: true,
-        captureEqualsWin: true
-    },{
         label: "Promotion",
-        position: "8/3P4/8/8/8/8/8/8 w HAha - 0 1",
+        position: "1k2b3/5P2/8/8/8/8/8/4K3 w - - 0 1",
         instruction: "When a pawn makes it to the other side of the board it can choose to promote to a Queen, Knight, Bishop, or a rook.",
         flip: true,
         captureEqualsWin: false
