@@ -49,7 +49,9 @@
                     }
                 } else {
                     stateData[target].score--;
-                    bigScore--;
+                    if (bigScore > 0) {
+                        bigScore--;
+                    }
                     instruction = "Keep trying! That was " + polygon.properties.NAME + ". Find " + target + ".";
                 }})
     (document.getElementById('globeViz'))
