@@ -36,20 +36,16 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
-    border: 10px solid;
 }
 
 .item {
     padding: 0.5em;
-    background-color: #fb7185;
     font-weight: 700;
     color: var(--clr-light);
     border: 10px solid var(--clr-accent);
     font-size: 30px;
     text-align: center;
 }
-
-
 .container {
     display: grid;
     grid-template-columns: 20% 15% 20% 10% 20% 15%;
@@ -60,36 +56,22 @@ body {
     grid-column: 1/3;
     grid-row: 1/3;
     overflow: hidden;
-
+    background-image: url("globe.png");
+    background-size: 690px 400px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 99%;
+    transition: .3s ease
 }
 
-.item-1 img {
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
+.item-1:hover {
+    transform: scale(1.1);
 }
 
 .item-1 h3 {
    text-align: center;
    font-size: 20px;
    padding-bottom: 20px;
-}
-
-h1.btn {
-    background-color: #fff;
-    color: #000;
-    width: 90%;
-    padding: 10px 20px;
-    border-radius: 27px;
-    font-size: 30px;
-    position: relative;
-    margin: 50px auto;
-    transition: .3s ease
-}
-
-h1.btn:hover {
-    background-color: #C4C4C4;
-    transform: scale(1.05);
 }
 
 .item-3 {

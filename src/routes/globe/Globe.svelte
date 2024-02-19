@@ -10,15 +10,17 @@
     let target;
     let bigScore= 0;
     let instruction = "Click to win!";
+    let chosenJSON;
 
     onMount(async () => {
-        countries = await getData();
+        chosenJSON = "us_ne.json";
+        countries = await getData(chosenJSON);
         stateData = extractStateData(countries);
         stateNames = Object.keys(stateData);
         target = stateNames[Math.floor(Math.random() * stateNames.length)];
         instruction = "Find " + target + "!";
         const world = Globe()
-            .pointOfView({lat: 36, lng: -101, altitude: 1.4}, 4000)  
+            .pointOfView({lat: 42, lng: -74, altitude: 0.5}, 4000)  
             .globeImageUrl(globeSkin)
             .backgroundImageUrl(globeBackground)
             .lineHoverPrecision(0)
@@ -38,11 +40,20 @@
             )
             .polygonsTransitionDuration(300)
             .onPolygonClick(polygon => {
+                const currentTarget = stateData[target];
                 if (polygon.properties.NAME === target) {
-                    stateData[target].score++;
+                    currentTarget.score++;
                     bigScore++;
-                    target = stateNames[Math.floor(Math.random() * stateNames.length)];
-                    if (bigScore >= 100) {
+                    if (currentTarget.score >= 2) {
+                        stateNames = stateNames.filter(name => name !== target);
+                    }
+                    const filteredStateNames = stateNames.filter(name => name !== target);
+                    if (filteredStateNames.length > 1) {
+                        target = filteredStateNames[Math.floor(Math.random() * filteredStateNames.length)];
+                    } else {
+                        target = stateNames[Math.floor(Math.random() * stateNames.length)];
+                    }
+                    if (bigScore >= 20 || stateNames.length == 0) {
                         instruction = "WINNER!"
                     } else {
                     instruction = "Good job! You clicked " + polygon.properties.NAME + "! Now find " + target + ".";
@@ -58,13 +69,12 @@
     });
 
     const getData = async () => {
-        const response = await fetch('gz_2010_us_040_00_20m.json');
+        const response = await fetch(chosenJSON);
         return await response.json();
     }
 
     function extractStateData(countries) {
     const stateData = {};
-
     countries.features.forEach(feature => {
         const stateName = feature.properties.NAME;
         const score = 0;
@@ -77,7 +87,8 @@
 <body>
 <div id="container">
     <div id="instruction-container">
-        <h1 id="instruction">{instruction} {bigScore}/100</h1>
+        <h1 id="instruction">{instruction}</h1>
+        <p>Score: {bigScore}</p>
     </div>
     <div id="globeViz"></div>
 </div>
