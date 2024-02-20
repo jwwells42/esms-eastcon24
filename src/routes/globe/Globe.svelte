@@ -5,9 +5,9 @@
     import globeSkin from '$lib/images/earth-night.jpg'
     import globeBackground from '$lib/images/night-sky.png'
 
-    let countries;
-    let stateData;
-    let stateNames;
+    let countries; // the parsed JSON data
+    let stateData; // target names & score extracted from the JSON
+    let stateNames; // target names isolated for use
     let target; // Country/state/etc. to be found
     let bigScore= 0; // Score displayed while playing
     let instruction = "Click to win!"; // Instruction displayed while playing
