@@ -16,39 +16,38 @@
     onMount(async () => {
         chosenJSON = "us_ne.json"; // To be replaced by campaign selection menu
         countries = await getData(chosenJSON); // call function to get and parse JSON data
-        stateData = extractStateData(countries);
-        stateNames = Object.keys(stateData);
-        target = stateNames[Math.floor(Math.random() * stateNames.length)];
-        instruction = "Find " + target + "!";
+        stateData = extractStateData(countries); // call function to iterate through the JSON for targets & initializing score
+        stateNames = Object.keys(stateData); // keys in JSON are the target names--now we have a standalone list of the names from the JSON
+        target = stateNames[Math.floor(Math.random() * stateNames.length)]; // choose a random target from the list
+        instruction = "Find " + target + "!"; // tell the user the target; see {instruction} in the html below
         const world = Globe()
-            .pointOfView({lat: 42, lng: -74, altitude: 0.5}, 4000)  
-            .globeImageUrl(globeSkin)
-            .backgroundImageUrl(globeBackground)
-            .lineHoverPrecision(0)
-            .polygonsData(countries.features)
-            .polygonAltitude(0.06)
-            .polygonCapColor(feat => 'steelblue')
-            .polygonSideColor(() => 'rgba(0, 100, 0, 0.15)')
-            .polygonStrokeColor(() => '#111')
+            .pointOfView({lat: 42, lng: -74, altitude: 0.5}, 4000) // initial camera position
+            .globeImageUrl(globeSkin) // skin of the globe, imported at the top
+            .backgroundImageUrl(globeBackground) // background image for behind the globes
+            .lineHoverPrecision(0) // idk
+            .polygonsData(countries.features) // make the shapes from the data
+            .polygonAltitude(0.06) // how high up the shapes live
+            .polygonCapColor(feat => 'steelblue') // top color of shapes
+            .polygonSideColor(() => 'rgba(0, 100, 0, 0.15)') // stringy side / under color of shapes
+            .polygonStrokeColor(() => '#111') // idk 
             .polygonLabel(({ properties: d }) => {
                 if (stateData[d.NAME].score < 1) {
                     return `<strong>${d.NAME}</strong>`
                 } else {
                     return ''
-                } })
+                } }) // Label shows if score is less than one; label blank if score is greater than one
             .onPolygonHover(hoverD => world
-            .polygonCapColor(d => d === hoverD ? 'darkred' : 'steelblue')
+            .polygonCapColor(d => d === hoverD ? 'darkred' : 'steelblue') // darkred if hovered, steelblue if not; we may want better colors
             )
-            .polygonsTransitionDuration(300)
-            .onPolygonClick(polygon => {
-                const currentTarget = stateData[target];
-                if (polygon.properties.NAME === target) {
-                    currentTarget.score++;
-                    bigScore++;
-                    if (currentTarget.score >= 2) {
+            .onPolygonClick(polygon => { // we do a lot of stuff when a polygon is clicked
+                const currentTarget = stateData[target]; // pull the current target into its own constant
+                if (polygon.properties.NAME === target) { // this means they got it correct
+                    currentTarget.score++; // increment the score for this specific state, currently for label tracking
+                    bigScore++; // increment the overall score for the scoreboard 
+                    if (currentTarget.score >= 2) { 
                         stateNames = stateNames.filter(name => name !== target);
-                    }
-                    const filteredStateNames = stateNames.filter(name => name !== target);
+                    } // if we have 2+ points, remove the target from the list of possible targets 
+                    const filteredStateNames = stateNames.filter(name => name !== target); 
                     if (filteredStateNames.length > 1) {
                         target = filteredStateNames[Math.floor(Math.random() * filteredStateNames.length)];
                     } else {
