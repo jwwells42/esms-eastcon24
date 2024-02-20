@@ -4,17 +4,18 @@
     import {onMount} from "svelte";
     import globeSkin from '$lib/images/earth-night.jpg'
     import globeBackground from '$lib/images/night-sky.png'
+
     let countries;
     let stateData;
     let stateNames;
-    let target;
-    let bigScore= 0;
-    let instruction = "Click to win!";
-    let chosenJSON;
+    let target; // Country/state/etc. to be found
+    let bigScore= 0; // Score displayed while playing
+    let instruction = "Click to win!"; // Instruction displayed while playing
+    let chosenJSON; // Campaign selection variable
 
     onMount(async () => {
-        chosenJSON = "us_ne.json";
-        countries = await getData(chosenJSON);
+        chosenJSON = "us_ne.json"; // To be replaced by campaign selection menu
+        countries = await getData(chosenJSON); // call function to get and parse JSON data
         stateData = extractStateData(countries);
         stateNames = Object.keys(stateData);
         target = stateNames[Math.floor(Math.random() * stateNames.length)];
@@ -74,15 +75,14 @@
     }
 
     function extractStateData(countries) {
-    const stateData = {};
-    countries.features.forEach(feature => {
-        const stateName = feature.properties.NAME;
-        const score = 0;
-        stateData[stateName] = {score};
-    });
-
-    return stateData;
-}
+        const stateData = {};
+        countries.features.forEach(feature => {
+            const stateName = feature.properties.NAME;
+            const score = 0;
+            stateData[stateName] = {score};
+        });
+        return stateData;
+    }
 </script>
 <body>
 <div id="container">
