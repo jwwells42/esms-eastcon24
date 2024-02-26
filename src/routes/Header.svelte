@@ -1,17 +1,23 @@
 <header>
-<a href="#" class="logo">logo</a>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Annapurna+SIL&family=Anta&display=swap" rel="stylesheet">
+<a href="/" class="logo">EAST</a>
 <input type="checkbox" id="menu-bar">
 <label for="menu-bar">Menu</label>
 
 <nav class="navbar">
     <ul>
-        <li><a href="#">home</a></li>
+        <li><a href="/frontgrid">home</a></li>
         <li><a href="#">levels +</a>
-    		<ul>
+    		<ul class="second">
  				<li><a href="#">north america</a></li>
 		        <li><a href="#">south america</a></li>
                 <li class="europe"><a href="#">europe +</a>
-                        <ul>
+                        <ul class="third">
                             <li><a href="#">test</a></li>
                             <li><a href="#">test</a></li>
                             <li><a href="#">test</a></li>
@@ -20,7 +26,7 @@
                     </ul>
                 </li>
                 <li><a href="#">about</a></li>
-                <li><a href="#">review</a></li>
+                <li><a href="/globe">globe</a></li>
                 <li><a href="#">contact</a></li>
                 <li><a href="#">feedback</a></li>
             </ul>
@@ -39,40 +45,59 @@ header {
     background: #ffffff;
     box-shadow: 0 5px 10px rgba(0,0,0,.1);
     padding: 0px 8%;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: skyblue;
 }
 
 header .logo{
     font-weight: bolder;
     font-size: 250%;
-    color: #333;
+    color: black;
+}
+
+.logo {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 header .navbar ul{
     list-style: none;
+    margin: 0px;
+    font-size: 20px;
+
 }
 
-header .navbar ul li{
+header .navbar ul li{       /*First Layer Of Nav Bar*/ /*Continue Working On Border*/
     position: relative;
     float: left;
+    z-index: 2;
+}
+
+.second {
+    padding: 0px;
+    text-align: center;
 }
 
 header .navbar ul li a{
     font-size: 150%;
     padding: 20px;
-    color: #333;
+    color: black;
     display: block;
 }
 
-header .navbar ul li a:hover{
-    background-color: #333;
-    color: #fff;
+.third {
+    padding: 0px;
+    background-color: skyblue;
 }
 
 header .navbar ul li ul{
     position: absolute;
     left: 0;
     width: 200px;
-    background: #fff;
+    background: skyblue;
     display: none;
 }
 
