@@ -54,7 +54,7 @@ body {
 .item-1 {
     grid-column: 1/3;
     grid-row: 1/3;
-    background-image: url('globe.png');
+    background-image: url('$lib/images/globe.png');
     background-size: 690px 400px;
     background-repeat: no-repeat;
     background-position-y: -38px;
