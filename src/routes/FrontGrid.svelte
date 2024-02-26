@@ -1,8 +1,6 @@
 <body>
     <div class="container">
         <div class="item item-1">Geography Game
-            <img src="globe.png">
-            <h1 href="/globe" class="btn">Try It!</h1>
         </div>
         <div class="item item-2">2</div>
         <div class="item item-3">3</div>
@@ -42,7 +40,8 @@ body {
     padding: 0.5em;
     font-weight: 700;
     color: var(--clr-light);
-    border: 10px solid var(--clr-accent);
+    border: 10px solid;
+    border-color: black;
     font-size: 30px;
     text-align: center;
 }
@@ -55,12 +54,13 @@ body {
 .item-1 {
     grid-column: 1/3;
     grid-row: 1/3;
-    overflow: hidden;
     background-image: url("globe.png");
     background-size: 690px 400px;
     background-repeat: no-repeat;
-    overflow: hidden;
-    width: 99%;
+    background-position-y: -38px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
     transition: .3s ease
 }
 
