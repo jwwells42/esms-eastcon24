@@ -5,7 +5,7 @@
 
 <nav class="navbar">
     <ul>
-        <li><a href="#">home</a></li>
+        <li><a href="\">home</a></li>
         <li><a href="#">levels +</a>
     		<ul>
  				<li><a href="#">north america</a></li>
