@@ -86,6 +86,7 @@ body {
     position: relative;
     color: var(--clr-light);
     z-index: 2;
+    font-size: 2vw; /* responsive text based on viewport width */
 }
 .item:hover {
     transform: scale(1.1);
