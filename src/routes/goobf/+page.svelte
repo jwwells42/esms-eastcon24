@@ -1,6 +1,8 @@
 <script>
     import P5 from 'p5-svelte';
     import { collidePointCircle } from 'p5collide'
+    import goobfjson from '$lib/images/goobf.json'
+    import goobfsheet from '$lib/images/goobf.png'
 
     const sketch = (p5) => {
         let x = 50;
@@ -11,13 +13,35 @@
         let r = 25;
         let hit = false;
         let count = 2;
+        let spritesheet;
+        let spritedata;
+        let animation = [];
+        let goobfs = [];
+
+        p5.preload = () => {
+            spritedata = p5.loadJSON({goobfjson});
+            spritesheet = p5.loadImage({goobfsheet});
+        }
 
         p5.setup = () => {
             p5.createCanvas(600, 600);
-        }
+            let frames = spritedata.frames;
+            for (let i = 0; i < frames.length; i++) {
+                let pos = frames[i].position;
+                let img = spritesheet.get(pos.x, pos.y, pos.w, pos.h);
+                animation.push(img);
+                }
+            for (let i = 0; i < 5; i++) {
+                goobfs[i] = new Sprite(animation, 0, i * 75, random(0.1, 0.4));
+                }
+            }
 
         p5.draw = () => {
             p5.background(42,42,42);
+            for (let goobf of goobfs) {
+                goobf.show();
+                goobf.animate();
+            }
             p5.point(p5.mouseX, p5.mouseY);
             hit = collidePointCircle(p5.mouseX, p5.mouseY, x, y, 100);
             p5.fill(hit ? p5.color('#2196F3') : 255);
@@ -39,10 +63,7 @@
 <body>
     <div class="big-container">
         <div class="goobf-container">
-            <h1>Take a moment to breathe with Goobf. Track the ball with your mouse as you breathe. Score high to win!</h1>
-            <div class="goobf-box">
-                <div class="goobf"></div>
-            </div>    
+            <h1>Take a moment to breathe with Goobf.</h1>
         </div>
     <P5 {sketch} />
     </div>
@@ -55,6 +76,7 @@
     h1 { 
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: rgb(184, 171, 149);
+        animation: wavy 7s infinite;
     }
 
     .big-container {
@@ -77,23 +99,9 @@
         position: absolute;
         width: 1046px;
         height: 929px;
-        background: url($lib/images/goobf.png);
-        animation: breathe 7s steps(12) infinite;
-        transform: scale(0.5);
     }
 
     @keyframes breathe {
         to { background-position: -12552px; }
     }   
-    @keyframes wavy {
-        0% {
-            transform: translateY(15px)
-        }
-        50% {
-            transform: translateY(-25px)
-        }
-        100% {
-            transform: translateY(15px)
-        }
-        }
 </style>
