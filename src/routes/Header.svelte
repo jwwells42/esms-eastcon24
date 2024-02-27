@@ -138,8 +138,8 @@ header label{
     display: none;
 }
 
-@media(max-width:991px){
-
+@media(max-width:1400px) {  /* media query temporarily set to 1400 because menu bar was stacking */
+ 
     header{
         padding: 20px;
     }
