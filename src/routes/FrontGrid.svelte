@@ -38,6 +38,11 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
+<<<<<<< Updated upstream
+=======
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); /* minimum of 5rem, maximum of 1fr */
+    gap: 4rem;
+>>>>>>> Stashed changes
 }
 
 .item {

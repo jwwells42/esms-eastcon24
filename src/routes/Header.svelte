@@ -11,16 +11,16 @@
 
 <nav class="navbar">
     <ul>
-        <li><a href="#">home</a></li>
+        <li><a href="/frontgrid">home</a></li>
         <li><a href="#">levels +</a>
-    		<ul class="second">
- 				<li><a href="#">north america</a></li>
-		        <li><a href="#">south america</a></li>
-                <li class="europe"><a href="#">europe +</a>
-                        <ul class="third">
-                            <li><a href="#">test</a></li>
-                            <li><a href="#">test</a></li>
-                            <li><a href="#">test</a></li>
+    		<ul class="invisible">
+ 				<li class="second"><a href="#">north america</a></li>
+		        <li class="second"><a href="#">south america</a></li>
+                <li class="second"><a href="#">europe +</a>
+                        <ul class="invisible">
+                            <li class="third"><a href="#">test</a></li>
+                            <li class="third"><a href="#">test</a></li>
+                            <li class="third"><a href="#">test</a></li>
                         </ul>
                         </li>
                     </ul>
@@ -67,21 +67,21 @@ header .navbar ul{
     list-style: none;
     margin: 0px;
     font-size: 20px;
-
 }
 
 header .navbar ul li{       /*First Layer Of Nav Bar*/ /*Continue Working On Border*/
     position: relative;
     float: left;
     background-color: skyblue;
-    border-style: solid;
-    border-radius: 20px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .second {
-    padding: 0px;
     text-align: center;
+}
+
+.invisible {
+    padding: 0px;
 }
 
 header .navbar ul li a{
@@ -97,7 +97,10 @@ header .navbar ul li a{
 }
 
 header .navbar ul li a:hover{
-
+    background-color: rgb(0, 150, 255);
+    border-style: solid;
+    border: 0px;
+    border-radius: 0%;
 }
 
 header .navbar ul li ul{
