@@ -2,11 +2,17 @@
 	import Slide from './Slide.svelte'
 	import Code from './Code.svelte'
     import Globe from '../globe/Globe.svelte'
+	import Horsey from '../horsey/Horsey.svelte'
 </script>
 
 <Slide>Horizontal Slide</Slide>
+
 <Slide>
     <Globe />
+</Slide>
+
+<Slide>
+	<Horsey />
 </Slide>
 
 <Slide animate>
