@@ -1,3 +1,7 @@
+<script>
+    
+</script>
+
 <body>
     <div class="container">
         <div class="item item-1">Geography Game
@@ -47,8 +51,8 @@ body {
 }
 .container {
     display: grid;
-    grid-template-columns: 20% 15% 20% 10% 20% 15%;
-    grid-template-rows: 200px 200px 200px 200px 200px;
+    grid-template-columns: 300px 250px 400px 400px 300px 250px;
+    grid-template-rows: 200px 140px 200px 200px 140px;
 }
 
 .item-1 {
@@ -66,12 +70,6 @@ body {
 
 .item-1:hover {
     transform: scale(1.1);
-}
-
-.item-1 h3 {
-   text-align: center;
-   font-size: 20px;
-   padding-bottom: 20px;
 }
 
 .item-3 {
