@@ -14,7 +14,7 @@
     let chosenJSON; // Campaign selection variable
 
     onMount(async () => {
-        chosenJSON = "us_ne.json"; // To be replaced by campaign selection menu
+        chosenJSON = "/us_ne.json"; // To be replaced by campaign selection menu
         countries = await getData(chosenJSON); // call function to get and parse JSON data
         stateData = extractStateData(countries); // call function to iterate through the JSON for targets & initializing score
         stateNames = Object.keys(stateData); // keys in JSON are the target names--now we have a standalone list of the names from the JSON
