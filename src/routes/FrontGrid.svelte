@@ -6,7 +6,7 @@
     <div class="container">
         <div class="item item-1">Geography Game
         </div>
-        <div class="item item-2">2</div>
+        <div class="item item-2"></div>
         <div class="item item-3">3</div>
         <div class="item item-4">4</div>
     </div>
@@ -58,7 +58,7 @@ body {
 .item-1 {
     grid-column: 1/3;
     grid-row: 1/3;
-    background-image: url(&lib/images/globe);
+    background-image: url('$lib/images/globe.png');
     background-size: 690px 400px;
     background-repeat: no-repeat;
     background-position-y: -38px;
