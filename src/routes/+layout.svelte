@@ -15,10 +15,13 @@
 			analyticsId: data.analyticsId
 		});
 	}
+   
+	$: showHeader = $page.url.pathname !== '/workshop' && $page.url.pathname !== '/gths';
 </script>
 
-	<Header />
-
+{#if showHeader}
+    <Header />
+{/if}
 		<slot />
 
 <style>
