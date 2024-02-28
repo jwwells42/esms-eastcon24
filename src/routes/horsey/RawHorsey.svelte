@@ -1,14 +1,12 @@
 <script>
-	import { onMount } from 'svelte';
     import { Chess } from 'svelte-chess';
     export let position = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+    export let words = ''
     let turn, history, chess;
-
-    onMount(() => {
-        if (chess) {
-            chess.load(position, { skipValidation: true, preserveHeaders: false });
-        }
-    });
+    
+    $: if (chess) {
+    chess.load(position, { skipValidation: true, preserveHeaders: false });
+  }
 </script>
 
 <div class="container">
@@ -21,10 +19,9 @@
         />
     </div>
     <div class="words">
-        <p>
-            {turn=='w'?'White':'Black'} to move.
-	        Moves played: {history?.join(' ')}
-        </p>
+        <p>{words}</p>
+        <p>{turn=='w'?'White':'Black'} to move.</p>
+	    <p>{history?.join(' ')}</p>
     </div>
 </div>
 

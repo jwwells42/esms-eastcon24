@@ -13,7 +13,7 @@
 	<h1>Today's Agenda</h1>
 	<ul>
 		<li>9:00-9:15 Introductions & Why Chess</li>
-		<li>9:15-9:30 Notation</li>
+		<li>9:15-9:30 Norms & Notation</li>
 		<li>9:30-9:45 Master of Initiative: Paul Morphy</li>
 		<li>9:45-10:00 Master of the Ending: José Raúl Capablanca</li>
 		<li>10:00-10:45 Tactics, Tactics, Tactics</li>
@@ -30,6 +30,16 @@
 	<br><br><br>
 	<p>You: Valley Springs, OMSD, Berryville, Cotter, Yellville, Flippin, Bergman, Eureka Springs, Searcy</p>
 	<p>Why do YOU play?</p>
+</section>
+<section>
+	<br><br><br>
+	<h1>Norms</h1>
+	<ol>
+		<li>Raise hand to share out</li>
+		<li>Participate, engage: yes, you will make mistakes (so will I)</li>
+		<li>Listen for callbacks</li>
+		<li>Here for the game & for each other</li>
+	</ol>
 </section>
 <section>
 	<h1>Notation</h1>
@@ -53,7 +63,7 @@
 </section>
 <section>
 	<h1></h1>
-	<RawHorsey position="4kb1r/p2n1ppp/4q3/4p1B1/4P3/1Q6/PPP2PPP/2KR4 w k - 0 16"/>
+	<RawHorsey position="4kb1r/p2n1ppp/4q3/4p1B1/4P3/1Q6/PPP2PPP/2KR4 w k - 0 16" words="Do you know this game?"/>
 </section>
 <section>
 	<div class=iframe-container>
