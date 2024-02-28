@@ -87,6 +87,12 @@
 	<p>Sacrifice,	Overloading</p>
 	<p>Underpromotion, Stalemate Tricks</p>
 </section>
+<section>
+	<h1>Resources and Q&A Time</h1>
+	<p>Steps Method, Polgar Mates</p>
+	<p>US Chess School & Other Youtube Channels</p>
+	<p>ChessKid, Lichess, Chesstempo, Chessable, Forward Chess, BOOKS</p>
+</section>
 
 <style>
 	.iframe-container {
