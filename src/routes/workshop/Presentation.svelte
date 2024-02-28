@@ -76,8 +76,16 @@
 	</div>
 </section>
 <section>
-	<h1>Ignore all of that: get good at Tactics</h1>
+	<h1>Ignore all of that:</h1>
+	<h2>get good at Tactics</h2>
 	<h3>Or as James Canty says, Calculation Over Everything</h3>
+	<p>Checkmating Patterns, Double Attacks</p>
+	<p>Skewer,	Removal of the Defender, Discovered Attacks</p>
+	<p>Decoy/Deflection, Double Check, Perpetual Check</p>
+	<p>Trapped Piece, Smothered Mate</p>
+	<p>Clearance,	Desperado</p>
+	<p>Sacrifice,	Overloading</p>
+	<p>Underpromotion, Stalemate Tricks</p>
 </section>
 
 <style>
