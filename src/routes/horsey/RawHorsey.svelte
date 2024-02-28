@@ -1,7 +1,14 @@
 <script>
+	import { onMount } from 'svelte';
     import { Chess } from 'svelte-chess';
     export let position = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
-    let turn, history;
+    let turn, history, chess;
+
+    onMount(() => {
+        if (chess) {
+            chess.load(position, { skipValidation: true, preserveHeaders: false });
+        }
+    });
 </script>
 
 <div class="container">
@@ -10,6 +17,7 @@
             fen={position}
             bind:turn
             bind:history
+            bind:this={chess}
         />
     </div>
     <div class="words">

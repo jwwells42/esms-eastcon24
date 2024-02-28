@@ -30,10 +30,3 @@
 		<Presentation />
 	</div>
 </div>
-
-<style>
-	.reveal {
-		height: 100vh;
-		width: 100vw;
-	}
-</style>
