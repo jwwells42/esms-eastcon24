@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-    <title>globular geo mappy seventh continent burg</title>
+    <title>Zonia</title>
 </svelte:head>
 
 <Globe />
