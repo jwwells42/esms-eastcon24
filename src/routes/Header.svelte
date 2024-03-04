@@ -11,7 +11,7 @@
     
     <nav class="navbar">
         <ul>
-            <li><a href="/frontgrid">home</a></li>
+            <li><a href="/">home</a></li>
             <li><a href="#">levels +</a>
                 <ul class="invisible">
                      <li class="second"><a href="#">north america</a></li>
