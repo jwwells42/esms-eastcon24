@@ -1,12 +1,3 @@
-<script>
-    import { globeChoice } from '$lib/store.js'
-
-    function chooseGlobe(newGlobe) {
-        $globeChoice = newGlobe;
-        console.log($globeChoice);
-    }
-</script>
-
 <header>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,12 +13,12 @@
         <ul>
             <li><a href="/globe">Zonia</a>
                 <ul class="invisible">
-                    <li class="second"><a href="/globe" on:click={() => chooseGlobe('/globeData/us.json')}>United States</a>
+                    <li class="second"><a href="/globe/us">United States</a>
                         <ul class="invisible">
-                            <li class="third"><a href="/globe" on:click={() => chooseGlobe('globeData/us-ne.json')}>Northeast</a></li>
-                            <li class="third"><a href="/globe">South</a></li>
-                            <li class="third"><a href="/globe">Midwest</a></li>
-                            <li class="third"><a href="/globe">West</a></li>
+                            <li class="third"><a href="/globe/us/northeast">Northeast</a></li>
+                            <li class="third"><a href="/globe/us/south">South</a></li>
+                            <li class="third"><a href="/globe/us/midwest">Midwest</a></li>
+                            <li class="third"><a href="/globe/us/west">West</a></li>
                         </ul></li>
                    <!-- <li class="second"><a href="/globe/Africa">Africa</a></li>
                     <li class="second"><a href="/globe/Europe">Europe</a></li>

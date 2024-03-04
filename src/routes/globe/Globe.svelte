@@ -4,7 +4,7 @@
     import Confetti from './Confetti.svelte';
     import globeSkin from '$lib/images/earth-night.jpg';
     import globeBackground from '$lib/images/night-sky.png';
-    import { globeChoice } from '$lib/store.js'
+    export let chosenJSON;
 
     let countries; // the parsed JSON data
     let stateData; // target names & score extracted from the JSON
@@ -13,8 +13,6 @@
     let bigScore = 0; // Score displayed while playing
     let instruction = "Click to win!"; // Instruction displayed while playing
     let confetti;
-    let chosenJSON;
-    $: chosenJSON = $globeChoice;
 
     onMount(async () => {
         console.log(chosenJSON)
@@ -22,6 +20,7 @@
         stateData = extractStateData(countries); // call function to iterate through the JSON for targets & initializing score
         stateNames = Object.keys(stateData); // keys in JSON are the target names--now we have a standalone list of the names from the JSON
         target = stateNames[Math.floor(Math.random() * stateNames.length)]; // choose a random target from the list
+        const winningScore = stateNames.length * 2;
         instruction = "Find " + target + "!"; // tell the user the target; see {instruction} in the html below
         const world = Globe()
             .pointOfView({lat: 42, lng: -74, altitude: 0.5}, 4000) // initial camera position
@@ -56,7 +55,7 @@
                     } else {
                         target = stateNames[Math.floor(Math.random() * stateNames.length)];
                     }
-                    if (bigScore >= 20 || stateNames.length == 0) {
+                    if (bigScore >= winningScore || stateNames.length == 0) {
                         instruction = "WINNER!";
                         confetti = "yes";
                     } else {

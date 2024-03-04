@@ -1,5 +1,5 @@
 <script>
-    import Globe from './Globe.svelte';
+    import Globe from '../Globe.svelte';
 </script>
 
 <svelte:head>
@@ -8,4 +8,3 @@
 
 <Globe chosenJSON="/globeData/us.json" />
 
-<!--refactor to allow passing of props into Globe for different campaigns-->
