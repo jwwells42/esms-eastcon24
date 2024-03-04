@@ -1,9 +1,10 @@
 <script>
     
+    import { onMount } from 'svelte';
     import Globe from 'globe.gl';
-    import {onMount} from "svelte";
-    import globeSkin from '$lib/images/earth-night.jpg'
-    import globeBackground from '$lib/images/night-sky.png'
+    import { Confetti } from 'svelte-confetti';
+    import globeSkin from '$lib/images/earth-night.jpg';
+    import globeBackground from '$lib/images/night-sky.png';
 
     let countries; // the parsed JSON data
     let stateData; // target names & score extracted from the JSON
@@ -12,6 +13,7 @@
     let bigScore= 0; // Score displayed while playing
     let instruction = "Click to win!"; // Instruction displayed while playing
     let chosenJSON; // Campaign selection variable
+    let confetti;
 
     onMount(async () => {
         chosenJSON = "/us_ne.json"; // To be replaced by campaign selection menu
@@ -54,7 +56,8 @@
                         target = stateNames[Math.floor(Math.random() * stateNames.length)];
                     }
                     if (bigScore >= 20 || stateNames.length == 0) {
-                        instruction = "WINNER!"
+                        instruction = "WINNER!";
+                        confetti = "yes";
                     } else {
                     instruction = "Good job! You clicked " + polygon.properties.NAME + "! Now find " + target + ".";
                     }
@@ -84,6 +87,11 @@
     }
 </script>
 <body>
+{#if confetti} fancy Svelte way of including javascript if-statement in html block
+    <div id="confetti-container">
+		<Confetti x={[-5, 5]} y={[0, 0.1]} delay={[500, 2000]} infinite amount=500 fallDistance="100vh" />
+	</div>
+{/if}
 <div id="container">
     <div id="instruction-container">
         <h1 id="instruction">{instruction}</h1>
@@ -92,12 +100,25 @@
     <div id="globeViz"></div>
 </div>
 </body>
-<style>
 
+<style>
     #instruction-container {
         position: absolute;
         color: white;
         z-index: 1;
         margin-left: 20px;
+    }
+    
+    #confetti-container {
+        position: fixed;
+        top: -50px;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        z-index: 2;
+        pointer-events: none;
     }
 </style>
