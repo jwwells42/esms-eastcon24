@@ -2,7 +2,7 @@
     
     import { onMount } from 'svelte';
     import Globe from 'globe.gl';
-    import { Confetti } from 'svelte-confetti';
+    import Confetti from './Confetti.svelte';
     import globeSkin from '$lib/images/earth-night.jpg';
     import globeBackground from '$lib/images/night-sky.png';
 
@@ -87,7 +87,7 @@
     }
 </script>
 <body>
-{#if confetti} fancy Svelte way of including javascript if-statement in html block
+{#if confetti} <!--fancy Svelte way of including javascript if-statement in html block-->
     <div id="confetti-container">
 		<Confetti x={[-5, 5]} y={[0, 0.1]} delay={[500, 2000]} infinite amount=500 fallDistance="100vh" />
 	</div>
