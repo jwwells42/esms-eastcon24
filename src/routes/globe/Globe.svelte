@@ -1,22 +1,23 @@
 <script>
-    
     import { onMount } from 'svelte';
     import Globe from 'globe.gl';
     import Confetti from './Confetti.svelte';
     import globeSkin from '$lib/images/earth-night.jpg';
     import globeBackground from '$lib/images/night-sky.png';
+    import { globeChoice } from '$lib/store.js'
 
     let countries; // the parsed JSON data
     let stateData; // target names & score extracted from the JSON
     let stateNames; // target names isolated for use
     let target; // Country/state/etc. to be found
-    let bigScore= 0; // Score displayed while playing
+    let bigScore = 0; // Score displayed while playing
     let instruction = "Click to win!"; // Instruction displayed while playing
-    let chosenJSON; // Campaign selection variable
     let confetti;
+    let chosenJSON;
+    $: chosenJSON = $globeChoice;
 
     onMount(async () => {
-        chosenJSON = "/us_ne.json"; // To be replaced by campaign selection menu
+        console.log(chosenJSON)
         countries = await getData(chosenJSON); // call function to get and parse JSON data
         stateData = extractStateData(countries); // call function to iterate through the JSON for targets & initializing score
         stateNames = Object.keys(stateData); // keys in JSON are the target names--now we have a standalone list of the names from the JSON

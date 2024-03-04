@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
+export let globeChoice = writable("/globeData/us.json");
 export let instruction = writable("Welcome to How the Horsey Moves. Let's learn how to play chess! Click KING to get started."); 
 export let flip = writable(true); 
 export let captureEqualsWin = writable(true);
