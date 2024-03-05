@@ -23,23 +23,3 @@
     <Header />
 {/if}
 		<slot />
-
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-		background-color:black;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-</style>

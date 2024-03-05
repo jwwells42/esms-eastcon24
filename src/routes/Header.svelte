@@ -152,7 +152,7 @@
     
         header .navbar{
             position: absolute;
-            top: 100%; left: 0; right: 0;
+            top: 100%; left: 0; right: 0; /* this line is part of why the mobile menu doesn't work, I think */
             background: #fff;
             border-top: 1px solid rgba(0,0,0,.1);
             display: none;
