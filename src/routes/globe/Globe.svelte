@@ -108,6 +108,7 @@
         color: white;
         z-index: 1;
         margin-left: 20px;
+        pointer-events: none;
     }
     
     #confetti-container {
