@@ -18,7 +18,6 @@
    
 	$: showHeader = $page.url.pathname !== '/workshop' && $page.url.pathname !== '/gths';
 </script>
-
 {#if showHeader}
     <Header />
 {/if}

@@ -45,7 +45,7 @@ box-sizing: border-box;
 }
 
 body {
-    margin: 5em 0 0 0;
+    margin: 0; /* this was originally 5em 0 0 0 which was creating the evil white bar at the top */
     padding: 0;
     line-height: 1.6;
     word-spacing: 1.4px;
@@ -57,7 +57,7 @@ body {
 .container {
     display: grid;
     width: 80vw;
-    margin: 0 auto;
+    margin: 5em auto; /* moving the 5em here meansa we only get the space under the header */
     grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); /* minimum of 5rem, maximum of 1fr */
     gap: 1.5rem;
 }

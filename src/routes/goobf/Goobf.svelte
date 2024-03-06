@@ -83,7 +83,7 @@
                 hit = collidePointCircle(touchX, touchY, x, y, 100);
             }
             y = centerY - amplitude * Math.sin(time);
-            time += 0.01; 
+            time += 0.0099; 
             p5.ellipse(x, y, r*2, r*2);
             y += speed * direct;
         }
@@ -91,7 +91,9 @@
 </script>
 <div class="flex">
     <P5 {sketch} />
-    <h1>Breathe with Goobf and help him feel better. {count}</h1>
+    <h1>Be Goobf's breathing buddy. Match your breath and follow the circle with your mouse.<br><br>
+        {Math.round(count / 60)} seconds</h1> <!--could set goal seconds, set adjuster for breathing time-->
+    
 </div>    
 <style>
     .flex {

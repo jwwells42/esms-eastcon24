@@ -5,5 +5,4 @@
 <svelte:head>
 	<title>ESMS EASTCON24</title>
 </svelte:head>
-
 <FrontGrid />
