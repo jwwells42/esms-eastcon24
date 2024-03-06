@@ -79,6 +79,7 @@
             if (p5.touches.length > 0) {
                 let touchX = p5.touches[0].x;
                 let touchY = p5.touches[0].y;
+                p5.touches[0].event.preventDefault(); // prevent scrolling hopefully
                 hit = collidePointCircle(touchX, touchY, x, y, 100);
             }
             y = centerY - amplitude * Math.sin(time);
