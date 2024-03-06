@@ -5,6 +5,7 @@
     import globeSkin from '$lib/images/earth-night.jpg';
     import globeBackground from '$lib/images/night-sky.png';
     export let chosenJSON;
+    export let pov = [37, -95, 0.7];
 
     let countries; // the parsed JSON data
     let stateData; // target names & score extracted from the JSON
@@ -23,7 +24,7 @@
         const winningScore = stateNames.length * 2;
         instruction = "Find " + target + "!"; // tell the user the target; see {instruction} in the html below
         const world = Globe()
-            .pointOfView({lat: 42, lng: -74, altitude: 0.5}, 4000) // initial camera position
+            .pointOfView({lat: pov[0], lng: pov[1], altitude: pov[2]}, 200) // initial camera position
             .globeImageUrl(globeSkin) // skin of the globe, imported at the top
             .backgroundImageUrl(globeBackground) // background image for behind the globes
             .lineHoverPrecision(0) // idk
