@@ -76,6 +76,11 @@
             if (hit) {
                 count++;
             }
+            if (p5.touches.length > 0) {
+                let touchX = p5.touches[0].x;
+                let touchY = p5.touches[0].y;
+                hit = collidePointCircle(touchX, touchY, x, y, 100);
+            }
             y = centerY - amplitude * Math.sin(time);
             time += 0.01; 
             p5.ellipse(x, y, r*2, r*2);
