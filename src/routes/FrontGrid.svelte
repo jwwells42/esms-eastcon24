@@ -4,28 +4,52 @@
 
 <body>
     <div class="container">
-        <a href="/globe">
+        <a href="/zonia">
             <div class="item">
-                <img class="img" src={globe} alt="Geography Game">
-                <h1 class="text">Geogopher</h1>
+                <img class="img" src={globe} alt="Zonia">
+                <h1 class="text">Zonia</h1>
             </div>
         </a>
-        <a href="/globe">
+        <a href="/horsey">
             <div class="item">
-                <img class="img" src={globe} alt="Geography Game">
-                <h1 class="text">Geogopher</h1>
+                <img class="img" src={globe} alt="Horsey">
+                <h1 class="text">Horsey</h1>
             </div>
         </a>
-        <a href="/globe">
+        <a href="/goobf">
             <div class="item">
-                <img class="img" src={globe} alt="Geography Game">
-                <h1 class="text">Geogopher</h1>
+                <img class="img" src={globe} alt="Goobf: Wellness">
+                <h1 class="text">Goobf: Wellness</h1>
             </div>
         </a>
-        <a href="/globe">
+        <a href="/vent">
             <div class="item">
-                <img class="img" src={globe} alt="Geography Game">
-                <h1 class="text">Geogopher</h1>
+                <img class="img" src={globe} alt="Purge Vent">
+                <h1 class="text">Purge Vent</h1>
+            </div>
+        </a>
+        <a href="/accessibility">
+            <div class="item">
+                <img class="img" src={globe} alt="Downtown Accessibility">
+                <h1 class="text">Downtown Accessibility</h1>
+            </div>
+        </a>
+        <a href="/design">
+            <div class="item">
+                <img class="img" src={globe} alt="Graphic Design">
+                <h1 class="text">Graphic Design</h1>
+            </div>
+        </a>
+        <a href="/presentation">
+            <div class="item">
+                <img class="img" src={globe} alt="Presentation">
+                <h1 class="text">ESMS EASTCon24 Presentation</h1>
+            </div>
+        </a>
+        <a href="https://www.eastconference.org/">
+            <div class="item">
+                <img class="img" src={globe} alt="EASTCon24">
+                <h1 class="text">EAST Conference Website</h1>
             </div>
         </a>
     </div>
@@ -57,9 +81,10 @@ body {
 .container {
     display: grid;
     width: 80vw;
-    margin: 5em auto; /* moving the 5em here meansa we only get the space under the header */
-    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); /* minimum of 5rem, maximum of 1fr */
-    gap: 1.5rem;
+    margin: 2em auto; /* moving the 2em here means we only get the space under the header */
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); /* minimum of 5rem, maximum of 1fr */
+    grid-auto-rows: minmax(15rem, auto);
+    gap: 1.3rem;
 }
 
 .item {
@@ -77,8 +102,9 @@ body {
     height: 100%;
     object-fit: cover; 
     position: absolute;
-    border: thick solid black;
-    border-radius: 15%;
+    border: none;
+    border-radius: 10%;
+    padding: 0;
     z-index: 1;
 }
 

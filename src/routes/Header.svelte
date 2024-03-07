@@ -7,7 +7,7 @@
 
 <header>
 
-    <a href="/" class="logo">EAST</a>
+    <a href="/" class="logo">ESMS EAST</a>
     <input type="checkbox" id="menu-bar">
     <label for="menu-bar">Menu</label>
     
@@ -48,7 +48,7 @@
         text-decoration: none;
         background: #ffffff;
         box-shadow: 0 5px 10px rgba(0,0,0,.1);
-        padding: 0px 8%;
+        padding: 0px 5%;
         font-family: "Anta", sans-serif;
         font-weight: 400;
         font-style: normal;

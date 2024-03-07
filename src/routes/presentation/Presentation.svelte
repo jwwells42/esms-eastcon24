@@ -1,7 +1,7 @@
 <script>
     import Slide from './Slide.svelte'
     import Code from './Code.svelte'
-    import Globe from '../globe/Globe.svelte'
+    import Globe from '../zonia/Globe.svelte'
     import Horsey from '../horsey/Horsey.svelte'
     import Goobf from '../goobf/Goobf.svelte';
 </script>
