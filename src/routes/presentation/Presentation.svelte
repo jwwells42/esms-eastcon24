@@ -7,15 +7,11 @@
 </script>
 
 <Slide>
-    <h1 class="text">Engaging paced breathing app for<br> students to use during school
-    </h1>
-    <div class="rightside">
-        <div class="goobfgroup">
-            <h1 class="goobftext">Breath With Goobf</h1>
-            <div class="goobf">
-                <Goobf />
-            </div>
+    <div class="slideone">
+        <div class="goobf">
+            <Goobf />
         </div>
+            <h1 class="goobftext">Breathing With Goobf</h1>
     </div>
 </Slide>
 
@@ -71,26 +67,28 @@
 
     /*Figure Out CSS Grid Stuff*/
 
-    .text {
-        font-size: 40px;
-        text-align: left;
-        margin: 25px;
-    }
-
-    .goobfgroup {
-        position: relative;
-        left: 700px;
+    .slideone {
+        background-color: rgb(42,42, 42);
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        width: 2560px;
+        height: 1300px;
     }
 
     .goobf {
         position: relative;
-        object-fit: cover;
+        grid-column: 4/6;
+        grid-row: 2/4;
+        left: 180px;
     }
 
     .goobftext {
+        text-align: center;
+        position: relative;
+        top: 170px;
         font-size: 70px;
+        grid-column: 4/6;
         color: skyblue;
     }
-
-
 </style>
