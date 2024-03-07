@@ -8,10 +8,14 @@
 
 <Slide>
     <div class="slideone">
+        <div class="goobftext">
+            <h1 class="goobftext">Engaging paced breathing app for students to use during school.
+            </h1>
+        </div>
         <div class="goobf">
             <Goobf />
         </div>
-            <h1 class="goobftext">Breathing With Goobf</h1>
+            <h1 class="goobfbreath">Breathing With Goobf</h1>
     </div>
 </Slide>
 
@@ -72,8 +76,8 @@
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 20% 20% 20% 20% 20%;
-        width: 2560px;
-        height: 1300px;
+        width: 100vw;
+        height: 100vh;
     }
 
     .goobf {
@@ -84,6 +88,13 @@
     }
 
     .goobftext {
+        margin: 10px;
+        font-size: 40px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .goobfbreath {
         text-align: center;
         position: relative;
         top: 170px;

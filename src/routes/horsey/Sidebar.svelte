@@ -26,7 +26,7 @@
 <style>
     ul {
         list-style-type: none;
-        color: yellow;
+        color: #fbbb3b;
         font-family: 'Courier New', monospace;
         margin: 0;
         padding: 0;

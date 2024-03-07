@@ -6,7 +6,7 @@
 p {
       margin: 0;
       padding: 0;
-      color:yellow;
+      color:#fbbb3b;
       font-family: 'Courier New', monospace;
     }
 </style>

@@ -40,50 +40,26 @@
                 <h1 class="text">Graphic Design</h1>
             </div>
         </a>
-        <a href="/presentation">
-            <div class="item">
-                <img class="img" src={globe} alt="Presentation">
-                <h1 class="text">ESMS EASTCon24 Presentation</h1>
-            </div>
-        </a>
-        <a href="https://www.eastconference.org/">
-            <div class="item">
-                <img class="img" src={globe} alt="EASTCon24">
-                <h1 class="text">EAST Conference Website</h1>
-            </div>
-        </a>
     </div>
 </body>
 
 <style>
-:root {
-    --clr-dark: #0f172a;
-    --clr-light: #f1f5f9;
-    --clr-accent: #e11d48;
-}
-
-*,
-*::before,
-*::after {
-box-sizing: border-box;
-}
-
 body {
     margin: 0; /* this was originally 5em 0 0 0 which was creating the evil white bar at the top */
     padding: 0;
     line-height: 1.6;
     word-spacing: 1.4px;
     font-family: 'Roboto', sans-serif;
-    color: var(--clr-dark);
-    background-color: var(--clr-light);
+    color: #fbbb3b;
+    background-color: rgb(42,42,42)
 }
 
 .container {
     display: grid;
     width: 80vw;
-    margin: 2em auto; /* moving the 2em here means we only get the space under the header */
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); /* minimum of 5rem, maximum of 1fr */
-    grid-auto-rows: minmax(15rem, auto);
+    max-height: 90vh;
+    margin: 1em auto; /* moving the 2em here means we only get the space under the header */
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* minimum of 5rem, maximum of 1fr */
     gap: 1.3rem;
 }
 

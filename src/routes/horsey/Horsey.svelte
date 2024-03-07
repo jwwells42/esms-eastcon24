@@ -42,8 +42,9 @@
 </body>
 <style>
   body {
+    padding-top: 1%;
     min-width: 100vw;
-    background-color: rgb(88, 101, 54);
+    background-color: rgb(42,42,42);
     overflow: hidden;
   }
 
@@ -59,7 +60,8 @@
 
   .chessboard {
     flex: 1;
-    max-width: 49%;
+    max-width: 43%;
+    margin-left: 4%
   }
 
   .instruction {

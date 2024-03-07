@@ -40,7 +40,7 @@
                     return ''
                 } }) // Label shows if score is less than one; label blank if score is greater than one
             .onPolygonHover(hoverD => world
-            .polygonCapColor(d => d === hoverD ? 'darkred' : 'steelblue') // darkred if hovered, steelblue if not; we may want better colors
+            .polygonCapColor(d => d === hoverD ? '#f58622' : 'steelblue') // darkred if hovered, steelblue if not; we may want better colors
             )
             .onPolygonClick(polygon => { // we do a lot of stuff when a polygon is clicked
                 const currentTarget = stateData[target]; // pull the current target into its own constant

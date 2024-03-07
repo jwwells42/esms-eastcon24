@@ -13,19 +13,19 @@
     
     <nav sveltekit-data-reload class="navbar">
         <ul>
-            <li><a href="/globe">Zonia</a>
+            <li><a href="/zonia">Zonia</a>
                 <ul class="invisible">
-                    <li class="second"><a href="/globe/us">United States</a>
+                    <li class="second"><a href="/zonia/us">United States</a>
                         <ul class="invisible">
-                            <li class="third"><a href="/globe/us/northeast">Northeast</a></li>
-                            <li class="third"><a href="/globe/us/south">South</a></li>
-                            <li class="third"><a href="/globe/us/midwest">Midwest</a></li>
-                            <li class="third"><a href="/globe/us/west">West</a></li>
+                            <li class="third"><a href="/zonia/us/northeast">Northeast</a></li>
+                            <li class="third"><a href="/zonia/us/south">South</a></li>
+                            <li class="third"><a href="/zonia/us/midwest">Midwest</a></li>
+                            <li class="third"><a href="/zonia/us/west">West</a></li>
                         </ul></li>
-                   <!-- <li class="second"><a href="/globe/Africa">Africa</a></li>
-                    <li class="second"><a href="/globe/Europe">Europe</a></li>
-                    <li class="second"><a href="/globe/Asia">Asia</a></li>
-                    <li class="second"><a href="/globe/Americas">Americas</a></li> -->
+                   <!-- <li class="second"><a href="/zonia/Africa">Africa</a></li>
+                    <li class="second"><a href="/zonia/Europe">Europe</a></li>
+                    <li class="second"><a href="/zonia/Asia">Asia</a></li>
+                    <li class="second"><a href="/zonia/Americas">Americas</a></li> -->
                 </ul>
                     <li><a href="/horsey">Horsey</a></li>
                     <li><a href="/goobf">Goobf</a></li>
@@ -46,19 +46,17 @@
         box-sizing: border-box;
         text-transform: capitalize;
         text-decoration: none;
-        background: #ffffff;
-        box-shadow: 0 5px 10px rgba(0,0,0,.1);
-        padding: 0px 5%;
+        padding: 0px 3%;
         font-family: "Anta", sans-serif;
         font-weight: 400;
         font-style: normal;
-        background-color: skyblue;
+        background-color: #c82689;
     }
     
     header .logo{
         font-weight: bolder;
-        font-size: 250%;
-        color: black;
+        font-size: 200%;
+        color: #f58622;
     }
     
     .logo {
@@ -70,13 +68,13 @@
     header .navbar ul{
         list-style: none;
         margin: 0px;
-        font-size: 20px;
+        font-size: 15px;
     }
     
     header .navbar ul li{       /*First Layer Of Nav Bar*/ /*Continue Working On Border*/
         position: relative;
         float: left;
-        background-color: skyblue;
+        background-color: #c82689;
         z-index: 3;
     }
     
@@ -90,8 +88,8 @@
     
     header .navbar ul li a{
         font-size: 150%;
-        padding: 20px;
-        color: black;
+        padding: 16px;
+        color: white;
         display: block;
     }
     
@@ -101,7 +99,7 @@
     }
     
     header .navbar ul li a:hover{
-        background-color: rgb(0, 150, 255);
+        background-color: #8b2261;
         border-style: solid;
         border: 0px;
         border-radius: 0%;
@@ -145,7 +143,7 @@
         display: none;
     }
     
-    @media(max-width:1150px){
+    @media(max-width:1000px){
     
         header{
             padding: 20px;
