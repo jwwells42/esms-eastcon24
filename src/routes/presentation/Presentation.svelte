@@ -30,6 +30,80 @@
         </p>
         
         <p class="jaspertwo">
+        </p>
+    </div>
+</Slide>
+
+<Slide>
+    <Globe />
+</Slide>
+
+<Slide>
+    <Horsey />
+</Slide>
+
+<Slide animate>
+    <Code id="code" lines>
+        {`
+            function love() {}
+     `}
+    </Code>
+</Slide>
+
+<Slide animate>
+    <Code id="code" lines="2|1-3">
+        {`
+            function love() {
+                console.log('Svelte')
+            }
+     `}
+    </Code>
+</Slide>
+
+<Slide>
+    <Slide>Vertical Slide 1</Slide>
+    <Slide>Vertical Slide 2</Slide>
+</Slide>
+
+<Slide animate>
+    <ul>
+        <li>React</li>
+        <li>Solid</li>
+        <li>Svelte</li>
+        <li>Vue</li>
+    </ul>
+</Slide>
+
+<Slide animate>
+    <ul>
+        <li>Svelte ❤️</li>
+        <li>React</li>
+        <li>Solid</li>
+        <li>Vue</li>
+    </ul>
+</Slide>
+<style>
+
+    /*Figure Out CSS Grid Stuff*/
+
+    .slideone {
+        background-color: rgb(42,42, 42);
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .goobf {
+        position: relative;
+        grid-column: 4/6;
+        grid-row: 2/4;
+        left: 180px;
+    }
+
+    .goobftext {
+        margin: 10px;
         font-size: 100%;
         text-align: left;
         width: 100%;
