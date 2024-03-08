@@ -1,8 +1,8 @@
 <script>
     import P5 from 'p5-svelte';
     import { collidePointCircle } from 'p5collide'
+    import { count } from '$lib/store.js';
 
-    let count = 0;
     let time = 0;
 
     class Sprite {
@@ -52,7 +52,7 @@
         }
 
         p5.setup = () => {
-            p5.createCanvas(1000, 700);
+            p5.createCanvas(700, 700);
             let frames = spritedata.frames;
             for (let i = 0; i < frames.length; i++) {
                 let pos = frames[i].position;
@@ -74,7 +74,7 @@
             hit = collidePointCircle(p5.mouseX, p5.mouseY, x, y, 100);
             p5.fill(hit ? p5.color('#2196F3') : 255);
             if (hit) {
-                count++;
+                $count++;
             }
             if (p5.touches.length > 0) {
                 let touchX = p5.touches[0].x;
@@ -89,18 +89,7 @@
         }
     }
 </script>
-<div class="flex">
     <P5 {sketch} />
-    <h1>Be Goobf's breathing buddy. Match your breath and follow the circle with your mouse.<br><br>
-        {Math.round(count / 60)} seconds</h1> <!--could set goal seconds, set adjuster for breathing time-->
-    
-</div>    
 <style>
-    .flex {
-        display: flex;
-    }
-
-    h1 {
-        color: white;
-    }
+   
 </style>

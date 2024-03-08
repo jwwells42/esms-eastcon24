@@ -9,13 +9,20 @@
 <Slide>
     <div class="slideone">
         <div class="goobftext">
-            <h1 class="goobftext">Engaging paced breathing app for students to use during school.
-            </h1>
+            <h2 class="goobftext">Breathing with Goobf: <br> Engaging paced breathing app for students to use during school.
+            </h2>
         </div>
         <div class="goobf">
             <Goobf />
         </div>
-            <h1 class="goobfbreath">Breathing With Goobf</h1>
+    </div>
+</Slide>
+
+<Slide>
+    <div class="slidethree">
+        <h1 class="title">Jasper's Purge Vent</h1>
+        <p class="jasper">My project is getting the middle school lab a purge vent. A purge vent sucks air out of a room which gets rid of dangerous gasses. I have presented to many different people including the principal and the faculties people. We have gotten clearance to buy the purge vent but we need to plan things first. This also includes other lab equipment including a chemical storage unit.Steel type: G90 Galvanized steel
+        </p>
     </div>
 </Slide>
 
@@ -73,33 +80,25 @@
 
     .slideone {
         background-color: rgb(42,42, 42);
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 20% 20% 20% 20% 20%;
-        width: 100vw;
-        height: 100vh;
+        display: flex;
     }
 
-    .goobf {
+    .slidethree {
+        font-size: 80%;
+        text-align: left;;
+    }
+    
+    .title {
         position: relative;
-        grid-column: 4/6;
-        grid-row: 2/4;
-        left: 180px;
-    }
-
-    .goobftext {
-        margin: 10px;
-        font-size: 40px;
+        font-size: 200%;
         text-align: left;
-        width: 100%;
+        margin: 30px;
+        color: #c82689;
     }
 
-    .goobfbreath {
-        text-align: center;
-        position: relative;
-        top: 170px;
-        font-size: 70px;
-        grid-column: 4/6;
-        color: skyblue;
+    .jasper {
+        margin: 30px;
+        width: 30%;
+        color: #fbbb3b;
     }
 </style>
