@@ -196,27 +196,8 @@
         height: 380%;
     }
 
-    .titletwo {
-        grid-column: 4/6;
-        grid-row: 1/1;
-        font-size: 190%;
-        position: relative;
-        color: #c82689;
-    }
-
-    .jaspertwo {
-        grid-column: 4/6;
-        grid-row: 1/6;
-        position: relative;
-        font-size: 30px;
-        font-size: 115%;
-        padding-top: 12%;
-        margin: 0%;
-        color: #fbbb3b;
-
-    }
-
-    .slidefour {
+    
+.slidefour {
         display: grid;
         position: absolute;
         grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
@@ -228,8 +209,8 @@
         grid-column: 1/1;
         grid-row: 1/1;
         text-align: left;
-        margin: 20px;
-        padding-left: 2.7vh;
+        margin: 1%;
+        padding-left: 1.7%;
         font-size: 190%;
         position: relative;
         color: #c82689;
@@ -239,12 +220,12 @@
         grid-column: 1/1;
         text-align: left;
         position: relative;
-        margin: 20px;
-        padding-left: 3vh;
-        font-size: 30px;
+        margin: 1%;
+        padding-left: 2%;
+        font-size: 10%;
         font-size: 115%;
-        width: 15em;
-        bottom: 2em;
+        width: 40%;
+        bottom: 18%;
         color: #fbbb3b;
     }
 </style>
