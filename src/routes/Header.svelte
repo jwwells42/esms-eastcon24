@@ -28,7 +28,7 @@
         </ul>
             </nav>
         </header>
-    <style>
+<style>
     header {
         display: flex;
         align-items: center;
