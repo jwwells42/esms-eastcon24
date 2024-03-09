@@ -20,19 +20,51 @@
 </Slide>
 
 <Slide>
-    <div class="slidethree">
-        <h1 class="title">Jasper's Purge Vent</h1> <h1 class="titletwo"></h1>
-        <p class="jasper">The goal of the purge vent project is to make a safer environment and be able to have a larger variety of 
-            potential lab experiments. The use of a purge vent is to simply suck out any harmful gases from chemicals objects so it 
-            does not hurt any students. I have presented to many different people including the principal and the faculties people. 
-            We have gotten clearance to buy the purge vent but we need to plan things first. This also includes other lab equipment 
-            including a chemical storage unit.Steel type: G90 Galvanized steel
-        </p>
-        
-        <p class="jaspertwo">
-        </p>
+    <div class="slidetwo">
+        <img src="/src/lib/images/meme.png">
+        <h1 class="title">Jasper's Purge Vent</h1> <h1 class="titletwo">CART</h1>
+        <p class="jasper">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p class="jaspertwo">
+                C- THis filsl the awefijasetghingy cause stuff and critical thinking things
+                <br>A- This project shows advance cause I learned how to present and hwo to plan big expensive thingys.
+                <br>R-
+                <br>T-
+            </p>
     </div>
 </Slide>
+
+<Slide>
+    <div class="slidethree">
+        <img class="jasperimage" src="/src/lib/images/meme.png">
+        <h1 class="title">Jasper's Purge Vent</h1>
+        <ul class="jasper">
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                dolore magna aliqua.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</li>
+        </ul>
+        </div>
+</Slide>
+
+    <Slide>
+        <div class="slidefour">
+            <h1 class="fourtitle">CART</h1>
+                <p class="fourtext">
+                    C- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                    et dolore magna aliqua.
+                    <br>A- This project shows advance cause I learned how to present and hwo to plan big expensive thingys.
+                    <br>R- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                    et dolore magna aliqua.
+                    <br>T- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                    et dolore magna aliqua.
+                </p>
+        </div>
+    </Slide>
 
 <Slide>
     <Globe />
@@ -118,52 +150,101 @@
         color: skyblue;
     }
 
-    .slidethree { /*Maybe look at changing padding-bottom on title elements to grid spacing*/
-        font-size: 80%;
-        text-align: left;
+    .slidetwo {
         display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 13% 20% 20% 20% 20%;
+        position: absolute;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 6em;
+        width: 100vw;
+        height: 96vh;
+    }
+
+    .slidethree { /*Maybe look at changing padding-bottom on title elements to grid spacing*/
+        display: grid;
+        position: absolute;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 6em;
+        width: 100vw;
+        height: 96vh;
     }
     
-    .title {
+    .jasperimage {
         position: relative;
-        font-size: 200%;
-        text-align: left;
-        padding-bottom: 50%;
-        padding-left: 8%;
-        padding-top: 8%;
-        margin: 0px;
+        grid-column: 4/6;
+        grid-row: 3/4;
+    }
+
+    .title {
+        position: absolute;
+        right: 50px;
+        grid-column: 1/3;
+        grid-row: 1/1;
+        font-size: 190%;
+        text-align: center;
         color: #c82689;
-        width: 170%;
-        height: 40%;
+        width: 100%;
     }
 
     .jasper {
+        position: relative;
         grid-column: 1/3;
-        grid-row: 2/3;
-        margin: 0px;
-        padding-left: 4%;
+        grid-row: 1/6;
+        padding-top: 10%;
+        font-size: 30px;
         font-size: 115%;
         color: #fbbb3b;
         height: 380%;
-        width: 70%;
     }
 
     .titletwo {
-        grid-column: 5/6;
-        grid-row: 1/2;
+        grid-column: 4/6;
+        grid-row: 1/1;
+        font-size: 190%;
         position: relative;
-        margin: 0%;
         color: #c82689;
     }
 
     .jaspertwo {
-        grid-column: 5/6;
-        grid-row: 2/3;
+        grid-column: 4/6;
+        grid-row: 1/6;
         position: relative;
+        font-size: 30px;
+        font-size: 115%;
+        padding-top: 12%;
         margin: 0%;
         color: #fbbb3b;
 
+    }
+
+    .slidefour {
+        display: grid;
+        position: absolute;
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+        width: 100vw;
+        height: 96vh;
+    }
+
+    .fourtitle {
+        grid-column: 1/1;
+        grid-row: 1/1;
+        text-align: left;
+        margin: 20px;
+        padding-left: 2.7vh;
+        font-size: 190%;
+        position: relative;
+        color: #c82689;
+    }
+
+    .fourtext {
+        grid-column: 1/1;
+        text-align: left;
+        position: relative;
+        margin: 20px;
+        padding-left: 3vh;
+        font-size: 30px;
+        font-size: 115%;
+        width: 15em;
+        bottom: 2em;
+        color: #fbbb3b;
     }
 </style>
