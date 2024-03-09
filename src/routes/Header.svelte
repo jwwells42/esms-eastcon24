@@ -1,12 +1,4 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Annapurna+SIL&family=Anta&display=swap" rel="stylesheet">
-
 <header>
-
     <a href="/" class="logo">ESMS EAST</a>
     <input type="checkbox" id="menu-bar">
     <label for="menu-bar">Menu</label>
