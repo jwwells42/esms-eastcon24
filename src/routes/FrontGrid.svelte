@@ -1,5 +1,7 @@
 <script>
     import globe from '$lib/images/globe.png'
+    import horsey from '$lib/images/horsey.png'
+    import goobf from '$lib/images/goobf.png'
 </script>
 
 <body>
@@ -12,13 +14,13 @@
         </a>
         <a href="/horsey">
             <div class="item">
-                <img class="img" src={globe} alt="Horsey">
+                <img class="img" src={horsey} alt="Horsey">
                 <h1 class="text">Horsey</h1>
             </div>
         </a>
         <a href="/goobf">
             <div class="item">
-                <img class="img" src={globe} alt="Goobf: Wellness">
+                <img class="img" src={goobf} alt="Goobf: Wellness">
                 <h1 class="text">Goobf: Wellness</h1>
             </div>
         </a>
