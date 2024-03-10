@@ -4,6 +4,8 @@
 
     let time = 0;
     let count = 0;
+    $: seconds = Math.round(count /60); 
+    $: secondsName = seconds > 1 ? "seconds" : "second";
 
     class Sprite {
         constructor(animation, x, y, speed, p5) {
@@ -36,7 +38,7 @@
         let x = 600;
         let y;
         let amplitude = 175; // Maximum movement distance above and below the center
-        let centerY = 350; // Center position of the ellipse's vertical movement
+        let centerY = 300; // Center position of the ellipse's vertical movement
         let speed = 1; // speed
         let direct = -1;//direction of movement
         let r = 50; //radius of the circle
@@ -86,15 +88,19 @@
 <div class="flex">
     <P5 {sketch} />
     <h1>
-        Be Goobf's breathing buddy! Match your breath and follow the circle with your mouse.<br>
-        {Math.round(count / 60)} seconds
+        Be Goobf's breathing buddy! Match your breath and follow the circle with your mouse.
+        {#if seconds < 1}
+        Set a goal, and relax into your breathing.
+        {:else}
+        <br><br>You've breathed for: {seconds} {secondsName}
+        {/if}
     </h1>
 </div>
 <style>
    .flex {
     display: flex;
    }
-   h1, h2 {
+   h1 {
     max-width: 30%;
     color: white;
     text-align: right;
