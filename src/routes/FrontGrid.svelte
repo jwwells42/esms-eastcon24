@@ -51,7 +51,7 @@ body {
     word-spacing: 1.4px;
     font-family: 'Roboto', sans-serif;
     color: #fbbb3b;
-    background-color: rgb(42,42,42)
+    background-color: rgb(139, 34, 97)
 }
 
 .container {

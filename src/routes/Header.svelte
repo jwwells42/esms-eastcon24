@@ -7,17 +7,19 @@
         <ul>
             <li><a href="/zonia">Zonia</a>
                 <ul class="invisible">
-                    <li class="second"><a href="/zonia/us">United States</a>
+                    <li class="second"><a rel="external" href="/zonia/us">United States</a>
                         <ul class="invisible">
-                            <li class="third"><a href="/zonia/us/northeast">Northeast</a></li>
-                            <li class="third"><a href="/zonia/us/south">South</a></li>
-                            <li class="third"><a href="/zonia/us/midwest">Midwest</a></li>
-                            <li class="third"><a href="/zonia/us/west">West</a></li>
+                            <li class="third"><a rel="external" href="/zonia/us/northeast">Northeast</a></li>
+                            <li class="third"><a rel="external" href="/zonia/us/south">South</a></li>
+                            <li class="third"><a rel="external" href="/zonia/us/midwest">Midwest</a></li>
+                            <li class="third"><a rel="external" href="/zonia/us/west">West</a></li>
                         </ul></li>
-                   <!-- <li class="second"><a href="/zonia/Africa">Africa</a></li>
-                    <li class="second"><a href="/zonia/Europe">Europe</a></li>
-                    <li class="second"><a href="/zonia/Asia">Asia</a></li>
-                    <li class="second"><a href="/zonia/Americas">Americas</a></li> -->
+                    <li class="second"><a rel="external" href="/zonia/africa">Africa</a></li>
+                    <li class="second"><a rel="external" href="/zonia/europe">Europe</a></li>
+                    <li class="second"><a rel="external" href="/zonia/asia">Asia</a></li>
+                    <li class="second"><a rel="external" href="/zonia/north-america">North America</a></li>
+                    <li class="second"><a rel="external" href="/zonia/south-america">South America</a></li>
+                    <li class="second"><a rel="external" href="/zonia/world">World</a></li>
                 </ul>
                     <li><a href="/horsey">Horsey</a></li>
                     <li><a href="/goobf">Goobf</a></li>
