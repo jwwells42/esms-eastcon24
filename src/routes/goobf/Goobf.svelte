@@ -1,9 +1,9 @@
 <script>
     import P5 from 'p5-svelte';
     import { collidePointCircle } from 'p5collide'
-    import { count } from '$lib/store.js';
 
     let time = 0;
+    let count = 0;
 
     class Sprite {
         constructor(animation, x, y, speed, p5) {
@@ -74,13 +74,7 @@
             hit = collidePointCircle(p5.mouseX, p5.mouseY, x, y, 100);
             p5.fill(hit ? p5.color('#2196F3') : 255);
             if (hit) {
-                $count++;
-            }
-            if (p5.touches.length > 0) {
-                let touchX = p5.touches[0].x;
-                let touchY = p5.touches[0].y;
-                p5.touches[0].event.preventDefault(); // prevent scrolling hopefully
-                hit = collidePointCircle(touchX, touchY, x, y, 100);
+                count++;
             }
             y = centerY - amplitude * Math.sin(time);
             time += 0.0099; 
@@ -89,7 +83,20 @@
         }
     }
 </script>
+<div class="flex">
     <P5 {sketch} />
+    <h1>
+        Be Goobf's breathing buddy! Match your breath and follow the circle with your mouse.<br>
+        {Math.round(count / 60)} seconds
+    </h1>
+</div>
 <style>
-   
+   .flex {
+    display: flex;
+   }
+   h1, h2 {
+    max-width: 30%;
+    color: white;
+    text-align: right;
+   }
 </style>
