@@ -1,6 +1,6 @@
 <script>
     import Globe from '../Globe.svelte';
-    let pov = [45, -97, 0.5];
+    let pov = [34, -97, 1];
 </script>
 
 <svelte:head>
