@@ -92,6 +92,7 @@
         {#if seconds < 1}
         Set a goal, and relax into your breathing.
         {:else}
+        Set a goal, and relax into your breathing.
         <br><br>You've breathed for: {seconds} {secondsName}
         {/if}
     </h1>
