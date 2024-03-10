@@ -3,5 +3,11 @@
 </script>
 
 <body>
-    <Goobf />    
+        <Goobf />
 </body>
+
+<style>
+    body {
+        background-color: rgb(42,42,42);
+    }
+</style>
