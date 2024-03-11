@@ -27,7 +27,8 @@
     ul {
         list-style-type: none;
         color: #fbbb3b;
-        font-family: 'Courier New', monospace;
+        font-family: 'Poppins500', monospace;
+        font-size: 2vw;
         margin: 0;
         padding: 0;
     }

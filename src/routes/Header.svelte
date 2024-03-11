@@ -137,31 +137,31 @@
         display: none;
     }
     
-    @media(max-width:1000px){
-    
-        header{
-            padding: 20px;
-        }
-    
+    @media(max-width:1150px){
+
         header label{
-            display: initial;
+            display: block;
+            position: relative;
+            z-index: 5;
         }
     
         header .navbar{
-            position: absolute;
-            margin-top: 100%;
+            position: fixed;
+            top: 50px;
             background: #c82689;
             border-top: 1px solid rgba(0,0,0,.1);
             display: none;
+            z-index: 4;
         }
     
         header .navbar ul li{
-            width: 100%;
+            width: 80%;
         }
     
         header .navbar ul li ul{
-            position: relative;
-            width: 100%;
+            position: static;
+            width: 80%;
+         
         }
     
         header .navbar ul li ul li{
@@ -169,7 +169,7 @@
         }
     
         header .navbar ul li ul li ul{
-            width: 100%;
+            width: 80%;
             left: 0;
         }
     

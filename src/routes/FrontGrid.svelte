@@ -2,6 +2,9 @@
     import globe from '$lib/images/globe.png'
     import horsey from '$lib/images/horsey.png'
     import goobf from '$lib/images/goobf.png'
+    import purge from '$lib/images/purgenotafan.png'
+    import accessibility from '$lib/images/accessibility-stairs.jpg'
+    import graphic from '$lib/images/foodtruck.png'
 </script>
 
 <body>
@@ -26,19 +29,19 @@
         </a>
         <a href="/vent">
             <div class="item">
-                <img class="img" src={globe} alt="Purge Vent">
+                <img class="img" src={purge} alt="Purge Vent">
                 <h1 class="text">Purge Vent</h1>
             </div>
         </a>
         <a href="/accessibility">
             <div class="item">
-                <img class="img" src={globe} alt="Downtown Accessibility">
+                <img class="img" src={accessibility} alt="Downtown Accessibility">
                 <h1 class="text">Downtown Accessibility</h1>
             </div>
         </a>
         <a href="/design">
             <div class="item">
-                <img class="img" src={globe} alt="Graphic Design">
+                <img class="img" src={graphic} alt="Graphic Design">
                 <h1 class="text">Graphic Design</h1>
             </div>
         </a>
@@ -51,18 +54,18 @@ body {
     padding: 0;
     line-height: 1.6;
     word-spacing: 1.4px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #fbbb3b;
-    background-color: rgb(139, 34, 97)
+    background-color: rgb(42, 42, 42)
 }
 
 .container {
     display: grid;
-    width: 80vw;
+    width: 70vw;
     max-height: 90vh;
     margin: 1em auto; /* moving the 2em here means we only get the space under the header */
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* minimum of 5rem, maximum of 1fr */
-    gap: 1.3rem;
+    grid-template-columns: repeat(3, minmax(15rem, 1fr)); 
+    gap: 1.4rem;
 }
 
 .item {
@@ -87,13 +90,31 @@ body {
 }
 
 .item .text {
+    display: inline;
     position: relative;
     color: var(--clr-light);
     z-index: 2;
     font-size: 2vw; /* responsive text based on viewport width */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: for rounded corners */
 }
+
 .item:hover {
     transform: scale(1.1);
     transition: .3s ease;
+}
+
+@media(max-width:1000px) {
+    .container {
+        grid-template-columns: repeat(2, minmax(15rem, 1fr)); 
+    }
+}
+
+
+@media(max-width:700px) {
+    .container {
+        grid-template-columns: repeat(1, minmax(15rem, 1fr)); 
+    }
 }
 </style>

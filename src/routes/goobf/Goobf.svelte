@@ -102,8 +102,10 @@
     display: flex;
    }
    h1 {
+    font-family: Poppins-500;
     max-width: 30%;
     color: white;
     text-align: right;
+    line-height: 1.1em;
    }
 </style>

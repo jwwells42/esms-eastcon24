@@ -7,6 +7,7 @@ p {
       margin: 0;
       padding: 0;
       color:#fbbb3b;
-      font-family: 'Courier New', monospace;
+      font-family: 'Poppins', monospace;
+      font-size: 2vw;
     }
 </style>
