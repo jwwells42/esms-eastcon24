@@ -63,9 +63,9 @@ body {
     display: grid;
     width: 70vw;
     max-height: 90vh;
-    margin: 1em auto; /* moving the 2em here means we only get the space under the header */
+    margin: 3vh auto; /* moving the 2em here means we only get the space under the header */
     grid-template-columns: repeat(3, minmax(15rem, 1fr)); 
-    gap: 1.4rem;
+    gap: 2vw;
 }
 
 .item {
