@@ -1,231 +1,215 @@
-<script>
-    import Slide from './Slide.svelte'
-    import Code from './Code.svelte'
-    import Globe from '../zonia/Globe.svelte'
-    import Horsey from '../horsey/Horsey.svelte'
-    import Goobf from '../goobf/Goobf.svelte';
-</script>
+    <script>
+        import Slide from './Slide.svelte'
+        import Code from './Code.svelte'
+        import Globe from '../zonia/Globe.svelte'
+        import Horsey from '../horsey/Horsey.svelte'
+        import Goobf from '../goobf/Goobf.svelte';
 
-<Slide>
-    <div class="slideone">
-        <div class="goobftext">
-            <p class="goobftext">Engaging paced breathing app for students to use during school.
-            </p>
-        </div>
-        <div class="goobf">
-            <Goobf />
-        </div>
-            <h1 class="goobfbreath">Breathing With Goobf</h1>
-    </div>
-</Slide>
-
-<Slide>
-    <div class="slidetwo">
-        <img src="/src/lib/images/meme.png">
-        <h1 class="title">Jasper's Purge Vent</h1> <h1 class="titletwo">CART</h1>
-        <p class="jasper">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            <p class="jaspertwo">
-                C- THis filsl the awefijasetghingy cause stuff and critical thinking things
-                <br>A- This project shows advance cause I learned how to present and hwo to plan big expensive thingys.
-                <br>R-
-                <br>T-
-            </p>
-    </div>
-</Slide>
-
-<Slide>
-    <div class="slidethree">
-        <img class="jasperimage" src="/src/lib/images/meme.png">
-        <h1 class="title">Jasper's Purge Vent</h1>
-        <ul class="jasper">
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</li>
-        </ul>
-        </div>
-</Slide>
+        let pov = [34, -97, 1];
+    </script>
 
     <Slide>
-        <div class="slidefour">
-            <h1 class="fourtitle">CART</h1>
-                <p class="fourtext">
-                    C- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                    et dolore magna aliqua.
-                    <br>A- This project shows advance cause I learned how to present and hwo to plan big expensive thingys.
-                    <br>R- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                    et dolore magna aliqua.
-                    <br>T- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                    et dolore magna aliqua.
-                </p>
+        <div class=slide-container>
+            <div class="slide-text">
+                One of our uncharted territories this year is ... the internet?? developing for the web
+                    <ul>
+                        <li>How the Horsey Moves: Chess Education</li>
+                        <li>Zonia: Geography Game</li>
+                        <li>Goobf: Wellness</li>
+                    </ul>
+            </div>
+            <div class="slide-image">
+                placeholder for image
+            </div>
         </div>
     </Slide>
 
-<Slide>
-    <Globe />
-</Slide>
+    <Slide>
+        <div class="slide-container flip">
+            <div class="slide-text">
+                <h1>Zonia: Geography Game</h1>
+                    <ul>
+                        <li>C:</li>
+                        <li>A:</li>
+                        <li>R:</li>
+                        <li>T:</li>
+                    </ul>
+            </div>
+            <div class="slide-image">
+                placeholder for image
+            </div>
+        </div>
+    </Slide>
 
-<Slide>
-    <Horsey />
-</Slide>
+    <Slide>
+        <Globe {pov} chosenJSON="/globeData/us.json" />
+    </Slide>
 
-<Slide animate>
-    <Code id="code" lines>
-        {`
-            function love() {}
-     `}
-    </Code>
-</Slide>
+    <Slide>
+        <div class=slide-container>
+            <div class="slide-text">
+                <h1>How the Horsey Moves</h1>
+                    <ul>
+                        <li>C:</li>
+                        <li>A:</li>
+                        <li>R:</li>
+                        <li>T:</li>
+                    </ul>
+            </div>
+            <div class="slide-image">
+                placeholder for image
+            </div>
+        </div>
+    </Slide>
 
-<Slide animate>
-    <Code id="code" lines="2|1-3">
-        {`
-            function love() {
-                console.log('Svelte')
-            }
-     `}
-    </Code>
-</Slide>
+    <Slide>
+        <Horsey />
+    </Slide>
 
-<Slide>
-    <Slide>Vertical Slide 1</Slide>
-    <Slide>Vertical Slide 2</Slide>
-</Slide>
+    <Slide>
+        <div class="slide-container flip">
+            <div class="slide-text">
+                <h1>Goobf</h1>
+                <h2>Engaging paced breathing app for students to use during school.</h2>
+                    <ul>
+                        <li>C:</li>
+                        <li>A:</li>
+                        <li>R:</li>
+                        <li>T:</li>
+                    </ul>
+            </div>
+            <div class="slide-image">
+                placeholder for image
+            </div>
+        </div>
+    </Slide>
+   
+    <Slide>
+        <div style="margin-left:10%;">
+            <Goobf />
+        </div>
+    </Slide>
 
-<Slide animate>
-    <ul>
-        <li>React</li>
-        <li>Solid</li>
-        <li>Svelte</li>
-        <li>Vue</li>
-    </ul>
-</Slide>
+    <Slide>
+        <div class="slide-container">
+            <div class="slide-text">
+                <h1>Another uncharted territory for us is making real change in our community, as a habit</h1>
+                    <ul>
+                        <li>Purge Vent for Science Lab</li>
+                        <li>Graphic Design for Local Businesses</li>
+                        <li>Mapping Downtown Accessibility in Eureka Springs</li>
+                    </ul>
+            </div>
+            <div class="slide-image">
+                placeholder for image
+            </div>
+        </div>
+    </Slide>
 
-<Slide animate>
-    <ul>
-        <li>Svelte ❤️</li>
-        <li>React</li>
-        <li>Solid</li>
-        <li>Vue</li>
-    </ul>
-</Slide>
-<style>
 
-    /*Figure Out CSS Grid Stuff*/
+    <Slide>
+        <div class="slide-container">
+            <div class="slide-text">
+                <h1>Purge Vent for Science Lab</h1>
+                <h2>Heklping teacher </h2>
+                    <ul>
+                        <li>C:</li>
+                        <li>A:</li>
+                        <li>R:</li>
+                        <li>T:</li>
+                    </ul>
+            </div>
+            <div class="slide-image">
+                placeholder for image
+            </div>
+        </div>
+    </Slide>
 
-    .slideone {
-        background-color: rgb(42,42, 42);
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 20% 20% 20% 20% 20%;
-        width: 100vw;
-        height: 100vh;
-    }
 
-    .goobf {
-        position: relative;
-        grid-column: 4/6;
-        grid-row: 2/4;
-        left: 180px;
-    }
+    <Slide>
+        <div class="slide-container flip">
+            <div class="slide-text">
+                <h1>Graphic Design for Local Businesses</h1>
+                <h2>make look good</h2>
+                    <ul>
+                        <li>C:</li>
+                        <li>A:</li>
+                        <li>R:</li>
+                        <li>T:</li>
+                    </ul>
+            </div>
+            <div class="slide-image">
+                placeholder for image
+            </div>
+        </div>
+    </Slide>
 
-    .goobftext {
-        margin: 10px;
-        font-size: 100%;
-        text-align: left;
-        width: 100%;
-    }
+    <Slide>
+        <div class="slide-container">
+            <div class="slide-text">
+                <h1>Accessibility in Downtown Eureka Springs</h1>
+                <h2>Bringing clarity to a vertical town.</h2>
+                    <ul>
+                        <li>C:</li>
+                        <li>A:</li>
+                        <li>R:</li>
+                        <li>T:</li>
+                    </ul>
+            </div>
+            <div class="slide-image">
+                placeholder for image
+            </div>
+        </div>
+    </Slide>
 
-    .goobfbreath {
-        text-align: center;
-        position: relative;
-        top: 170px;
-        font-size: 70px;
-        grid-column: 4/6;
-        color: skyblue;
-    }
+    <Slide>
+        <div style="display:flex;">
+            <iframe name="survey123webform" width="500" height="1000" frameborder="0" marginheight="0" marginwidth="0" title="Accessibility" src="https://survey123.arcgis.com/share/7e81a8f252af4228b9b1d838468d3ac0" allow="geolocation https://survey123.arcgis.com; camera https://survey123.arcgis.com"></iframe>
+            <iframe src="https://east.maps.arcgis.com/apps/instant/basic/index.html?appid=30115914f0fc40e28150f6d12e37099a" title="Accessibility Map" width="2000" height="800" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
+        </div>
+    </Slide>
+    <Slide>
+        <div class="slide-container">
+            <div class="slide-text">
+                <h1>What's next? Connections</h1>
+                    <ul>
+                        <li>Drone Pilot scheduled April 2</li>
+                        <li>Alderman contact</li>
+                        <li>Other contacts we;ve gotten this year (sewing machine, what else)</li>
+                        <li>T:</li>
+                    </ul>
+            </div>
+            <div class="slide-image">
+                placeholder for image
+            </div>
+            <h1>What's next? Tech</h1>
+                    <ul>
+                        <li>Drone</li>
+                        <li>Laser Thing</li>
+                        <li>R:</li>
+                        <li>T:</li>
+                    </ul>
+        </div>
+    </Slide>
 
-    .slidetwo {
-        display: grid;
-        position: absolute;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-        gap: 6em;
-        width: 100vw;
-        height: 96vh;
-    }
+    <style>
+        .slide-container {
+            display: flex;
+            max-width: 80vw;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
 
-    .slidethree { /*Maybe look at changing padding-bottom on title elements to grid spacing*/
-        display: grid;
-        position: absolute;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-        gap: 6em;
-        width: 100vw;
-        height: 96vh;
-    }
-    
-    .jasperimage {
-        position: relative;
-        grid-column: 4/6;
-        grid-row: 3/4;
-    }
+        .flip { /* include this class if you want the image on the right */
+            flex-direction: row-reverse;
+        }
 
-    .title {
-        position: absolute;
-        right: 50px;
-        grid-column: 1/3;
-        grid-row: 1/1;
-        font-size: 190%;
-        text-align: center;
-        color: #c82689;
-        width: 100%;
-    }
+        .slide-text {
+            flex: 50%;
+        }
 
-    .jasper {
-        position: relative;
-        grid-column: 1/3;
-        grid-row: 1/6;
-        padding-top: 10%;
-        font-size: 30px;
-        font-size: 115%;
-        color: #fbbb3b;
-        height: 380%;
-    }
-
-    
-.slidefour {
-        display: grid;
-        position: absolute;
-        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
-        width: 100vw;
-        height: 96vh;
-    }
-
-    .fourtitle {
-        grid-column: 1/1;
-        grid-row: 1/1;
-        text-align: left;
-        margin: 1%;
-        padding-left: 1.7%;
-        font-size: 190%;
-        position: relative;
-        color: #c82689;
-    }
-
-    .fourtext {
-        grid-column: 1/1;
-        text-align: left;
-        position: relative;
-        margin: 1%;
-        padding-left: 2%;
-        font-size: 10%;
-        font-size: 115%;
-        width: 40%;
-        bottom: 18%;
-        color: #fbbb3b;
-    }
-</style>
+        .slide-image {
+            flex: 50%;
+        }
+    </style>

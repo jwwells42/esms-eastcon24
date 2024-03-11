@@ -78,6 +78,12 @@
             if (hit) {
                 count++;
             }
+            if (p5.touches.length > 0) {
+                let touchX = p5.touches[0].x;
+                let touchY = p5.touches[0].y;
+                p5.touches[0].event.preventDefault(); // prevent scrolling hopefully
+                hit = collidePointCircle(touchX, touchY, x, y, 100);
+            }
             y = centerY - amplitude * Math.sin(time);
             time += 0.0099; 
             p5.ellipse(x, y, r*2, r*2);
@@ -86,8 +92,10 @@
     }
 </script>
 <div class="flex">
-    <P5 {sketch} />
-    <h1>
+    <div class="sketch">
+        <P5 {sketch} />
+    </div>
+    <div class="text">
         Be Goobf's breathing buddy! Match your breath and follow the circle with your mouse.
         {#if seconds < 1}
         Set a goal, and relax into your breathing.
@@ -95,17 +103,41 @@
         Set a goal, and relax into your breathing.
         <br><br>You've breathed for: {seconds} {secondsName}
         {/if}
-    </h1>
+    </div>
 </div>
 <style>
    .flex {
     display: flex;
    }
-   h1 {
+   .text { /*text class instead of h1 because reveal.js kept eating the h1 */
     font-family: Poppins-500;
     max-width: 30%;
     color: white;
     text-align: right;
-    line-height: 1.1em;
+    font-size: 2.5vw;
+    padding: 5%;
+   }
+
+   @media (max-width: 1000px){
+    .flex {
+        flex-direction: column;
+    }
+    .sketch {
+        margin: 0;
+        padding: 0;
+        order: 2;
+        flex: 100%;
+        margin-top: -7%;
+        z-index: 0;
+        transform: scale (0.25);
+    }
+    .text {
+        max-width: 100%;
+        text-align: center;
+        font-size: 3vw;
+        padding: 0;
+        margin-top: 1%;
+        z-index:2
+    }
    }
 </style>

@@ -12,13 +12,13 @@
         <a href="/zonia">
             <div class="item">
                 <img class="img" src={globe} alt="Zonia">
-                <h1 class="text">Zonia</h1>
+                <h1 class="text">Zonia: Geography</h1>
             </div>
         </a>
         <a href="/horsey">
             <div class="item">
                 <img class="img" src={horsey} alt="Horsey">
-                <h1 class="text">Horsey</h1>
+                <h1 class="text">How the Horsey Moves</h1>
             </div>
         </a>
         <a href="/goobf">
@@ -30,19 +30,19 @@
         <a href="/vent">
             <div class="item">
                 <img class="img" src={purge} alt="Purge Vent">
-                <h1 class="text">Purge Vent</h1>
+                <h1 class="text">Purge Vent for Science Lab</h1>
+            </div>
+        </a>
+        <a href="/design">
+            <div class="item">
+                <img class="img" src={graphic} alt="Graphic Design">
+                <h1 class="text">Graphic Design for Local Businesses</h1>
             </div>
         </a>
         <a href="/accessibility">
             <div class="item">
                 <img class="img" src={accessibility} alt="Downtown Accessibility">
                 <h1 class="text">Downtown Accessibility</h1>
-            </div>
-        </a>
-        <a href="/design">
-            <div class="item">
-                <img class="img" src={graphic} alt="Graphic Design">
-                <h1 class="text">Graphic Design</h1>
             </div>
         </a>
     </div>

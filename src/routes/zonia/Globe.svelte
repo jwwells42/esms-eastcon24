@@ -95,8 +95,8 @@
 {/if}
 <div id="container">
     <div id="instruction-container">
-        <h1 id="instruction">{instruction}</h1>
-        <p>Score: {bigScore}</p>
+        <div id="instruction">{instruction}</div>
+        <div id="score">Score: {bigScore}</div>
     </div>
     <div id="globeViz"></div>
 </div>
@@ -110,6 +110,20 @@
         margin-left: 20px;
         pointer-events: none;
     }
+
+    #instruction { /*div instead of h1 because reveal kept eating h1s*/
+        margin-top: 1%;
+        font-size: 2em;
+        font-family: Poppins;
+        max-width: 100%;
+    }
+
+    #score {
+        font-family: Poppins-500;
+        font-size: 1.5em;
+        margin-top: 0;
+        padding: 0;
+    }
     
     #confetti-container {
         position: fixed;
@@ -122,5 +136,11 @@
         overflow: hidden;
         z-index: 2;
         pointer-events: none;
+    }
+    @media (max-width: 600px) {
+        #instruction {
+            font-size: 1em;
+            max-width: 100%;
+        }
     }
 </style>
