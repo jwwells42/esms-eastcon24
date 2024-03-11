@@ -85,9 +85,7 @@
     </Slide>
    
     <Slide>
-        <div style="margin-left:10%;">
-            <Goobf />
-        </div>
+        <Goobf />
     </Slide>
 
     <Slide>

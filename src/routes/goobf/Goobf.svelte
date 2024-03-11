@@ -109,6 +109,9 @@
    .flex {
     display: flex;
    }
+   .sketch {
+    margin: 0 auto;
+   }
    .text { /*text class instead of h1 because reveal.js kept eating the h1 */
     font-family: Poppins-500;
     max-width: 30%;
