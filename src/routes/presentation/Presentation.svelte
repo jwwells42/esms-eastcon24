@@ -19,7 +19,7 @@
                     </ul>
             </div>
             <div class="slide-image">
-                placeholder for image
+                placeholder for image<br>could also mention/list javascript libraries, freecodecamp, other resources
             </div>
         </div>
     </Slide>
