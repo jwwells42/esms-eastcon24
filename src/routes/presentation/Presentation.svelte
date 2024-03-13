@@ -95,7 +95,7 @@
                     </li>
                     <li class="cart">A: Learned HTML/CSS/Javascript and the library Globe.gl
                     </li>
-                    <li class="cart">R: Working with teachers and students in our school
+                    <li class="cart">R: Working with teachers and students in our school; building on the legacy of Zonia Baber, former geography teacher
                     </li>
                     <li class="cart">T: Developers: Chase D, Draven, and Samson 
                         developed the site, working with Roscoe and Murphy from the elementary
