@@ -23,8 +23,8 @@
                 </ul>
                     <li><a href="/horsey">Horsey</a></li>
                     <li><a href="/goobf">Goobf</a></li>
-                    <li><a href="/vent">Vent</a></li>
-                    <li><a href="/design">Design</a></li>
+                    <li><a href="/presentation#/9">Vent</a></li>
+                    <li><a href="/presentation#/10">Design</a></li>
                     <li><a href="/accessibility">Accessibility</a></li>
                     <li><a href="/presentation">Presentation</a></li>
         </ul>
