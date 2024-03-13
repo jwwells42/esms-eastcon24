@@ -27,13 +27,13 @@
                 <h1 class="text">Goobf: Wellness</h1>
             </div>
         </a>
-        <a rel="external" href="/presentation#/9">
+        <a rel="external" href="https://esms-eastcon24.vercel.app/presentation/#/9">
             <div class="item">
                 <img class="img" src={purge} alt="Purge Vent">
                 <h1 class="text">Purge Vent for Science Lab</h1>
             </div>
         </a>
-        <a rel="external" href="/presentation#/10">
+        <a rel="external" href="https://esms-eastcon24.vercel.app/presentation/#/10">
             <div class="item">
                 <img class="img" src={graphic} alt="Graphic Design">
                 <h1 class="text">Graphic Design for Local Businesses</h1>

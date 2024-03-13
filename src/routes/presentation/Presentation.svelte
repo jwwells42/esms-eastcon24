@@ -117,12 +117,12 @@
         <div class="slide-text">
             <h1>How the Horsey Moves</h1>
                 <ul>
-                    <li class="cart">C: Free and safe website to teach & learn chess fundamentals (combining Lichess and ChessKid)
+                    <li class="cart">C: Free and safe website to teach & learn chess fundamentals without ads or chat   
                     </li>
-                    <li class="cart">A: Learning progress in chess + HTML/CSS/Javascript, using the Javascript libraries Chessground and Svelte-Chess</li>
-                    <li class="cart">R: GT Coordinators in districts without a chess coach need reliable resources; students with free time want to play chess, but sites are not appropriate
+                    <li class="cart">A: Learning progression in chess + coding in HTML/CSS/Javascript, Chessground</li>
+                    <li class="cart">R: GT Coordinators in OUR coop; students without coaches
                     </li>
-                    <li class="cart">T: William Vaverka & Malakai Pederson.</li>
+                    <li class="cart">T: William Vaverka & Malakai Pederson</li>
                 </ul>
         </div>
         <div class="slide-image">
@@ -166,8 +166,8 @@
                 <ul>
                     <li>C: Designing purge vent to bring lab up to code</li>
                     <li>A: Learn chemicals, ducting materials (G90), airflow </li>
-                    <li>R: Working with head of building/grounds Mr. Mann, work requested by science teacher</li>
-                    <li>T: Jasper as main designer and presenter with help from Isaiah and Kenji</li>
+                    <li>R: With head of building/grounds Mr. Mann, helping science teacher</li>
+                    <li>T: Jasper (pictured), Isaiah, Kenji</li>
                 </ul>
         </div>
         <div class="slide-image">
