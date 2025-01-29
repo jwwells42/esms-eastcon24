@@ -35,7 +35,13 @@
             .polygonStrokeColor(() => '#111') // idk 
             .polygonLabel(({ properties: d }) => {
                 if (stateData[d.NAME].score < 1) {
-                    return `<p id="label">${d.NAME}</p>`
+                    return `<p style="
+                        font-family: Poppins;    
+                        font-size: 1em;
+                        margin-top: 0;
+                        padding: 0;
+                        ">
+                    ${d.NAME}</p>`
                 } else {
                     return ''
                 } }) // Label shows if score is less than one; label blank if score is greater than one
@@ -137,6 +143,7 @@
         z-index: 2;
         pointer-events: none;
     }
+
     @media (max-width: 600px) {
         #instruction {
             font-size: 1em;
