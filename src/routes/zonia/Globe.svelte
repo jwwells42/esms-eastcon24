@@ -38,8 +38,6 @@
                     return `<p style="
                         font-family: Poppins;    
                         font-size: 1em;
-                        margin-top: 0;
-                        padding: 0;
                         ">
                     ${d.NAME}</p>`
                 } else {
