@@ -35,7 +35,7 @@
             .polygonStrokeColor(() => '#111') // idk 
             .polygonLabel(({ properties: d }) => {
                 if (stateData[d.NAME].score < 1) {
-                    return `<strong>${d.NAME}</strong>`
+                    return `<p id="label">${d.NAME}</p>`
                 } else {
                     return ''
                 } }) // Label shows if score is less than one; label blank if score is greater than one
